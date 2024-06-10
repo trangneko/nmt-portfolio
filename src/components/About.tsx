@@ -237,15 +237,15 @@ const About = () => {
           </IconBox>
           <Card sx={{ minWidth: "220px" }}>
             <CardContent sx={{ textAlign: "left" }}>
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{ display: "flex", alignItems: "center", mb:"3px"}}>
                 <CakeRoundedIcon sx={{ marginRight: 1 }} />
                 2001.01.16
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{ display: "flex", alignItems: "center", mb:"3px"}}>
                 <LocationOnRoundedIcon sx={{ marginRight: 1 }} />
                 Tokyo, Japan
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{ display: "flex", alignItems: "center"}}>
                 <MailRoundedIcon sx={{ marginRight: 1 }} />
                 lucideneko@gmail.com
               </Typography>
