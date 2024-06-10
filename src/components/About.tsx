@@ -18,6 +18,8 @@ import MailRoundedIcon from "@mui/icons-material/MailRounded";
 import { IconBox, IconContainer, IconImage } from "./Icons";
 import { TwoColContainer } from "./Containers";
 
+// import Ava from "/images/ava.jpg";
+
 const FuriganaTypography = styled(Typography)(({ theme }) => ({
   "& ruby": {
     display: "inline-block",
@@ -214,7 +216,7 @@ const About = () => {
 
         <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column", gap: 2}}>
           <IconBox sx={{ width: 180, height: 180}}>
-            <IconImage src={"/images/ava.jpg"} alt="ava" />
+            <IconImage src={"https://lh3.googleusercontent.com/fife/ALs6j_FuINOnesmk3ggdhyVyZEASZO5OhmQG2t7msc02oxJlsq2gp4t6H56ih3EEs2AeNU3WYx66VIdRChDHD25iFqQVX-l0bpYS_TXzfXQXBkQeih8dmfdHyu_yZlGAwJvi8wwBXRG8_5XC16A2rmc1q2d5Ak5I4oL3lx3Is-w-u0navMzMPHlB4Vl-AlG_pc-LDdg4pjdYugkylDpmktZ2tpiKfq2wUm2o7mV0b402fkcQ4AblA8t16hb58cv4B9plYa_KaFU4XoDQ7Sci75ftY6ZP-S03EBhY59apsm_uhgTp9FKkBRFNvCry3Fau80Wzo6nyUR7u1tmVQ_kZDCTPeuJSDWMkgnbdqdtNB6g19-B_mdEGasLxB_H1pWv8QHoxjlXf2UbEwiTMU4VOjAswWbe4z_s1aAE7EN9zQA3CsNtMtQvUoJeBA2a6MrKrWxQGUnPmnEBKOdaNPLt4ss7rzfM9jHtD4VXVOlOthU57hsAzcIj7tMF_hbDmVpsFoZLV13rpPIIB3pb4wAL4HHsTQ8mtr3jWDkmziKsua47fcgf_14cpfWwWhPg6MlXH54B2WbacbSbqzsrcFaOVSLvR2Jicsfxek7ydojmqWL97XAyp_OmKkI8BzgahRf30Ipi5S3N0tJ5oFyLsY2oRbj3ZjLgaHK3uMzoyBGlSyJBUPyg1pBa-azi5DxoZQ9JDnpjL1SUHd1tVvX3lIBjVvXy5pi5DvMNNpY9P-1TJSja87Loy9Pot0vawuLUZl2rQu-S57TO-YhlT16W9QxHzKnqcNYDlBZ-mmVd6OtViLoeu1jKQCHes6rkJ0sOzlWUF-fJCMaUTU4DiW6wIeLdUBoMdMudZwd1rAHVNNrKTFqa7sXF-ngDlOg03I7pDf1Yjpb5H_MUlMMFHMwx1cLwut2km89x2Ca2x5HdBbaIEnaNEYxRwQ0BuUkvTlGyEYRNHUO-vUollHZjoPh_y4ZrX8KxSXBfXHkcsgMImW6gkVbXqYTBs5uizoJeOZEmdqgxAGghC6hSl_9j3clzAbsPepGf5GtQEWqlaTM3ByKTubMABr4LmTNjO3EVD0fhyRgU7xdZsFaEXPT8bNU5XltMdWV8Q6Wk_hAsdHdHVvWvcihoJmKeae-b-tavhEWzkFJ1POz1cHpdBrF2gI2TdKgOUEoyvWlIcuoh2yp0JDEobMBQqdNw-FlJSNcEWvAQ-Me9qaRjdzeYfXHl9NWfo522ZKBarqyq2JATRBXSKkYagKhZsLw7X8SyVYUSDhtM-_NeqIO2J_-ISXm-todVz01If5XMgXkF68EcczWYq-W7-eBH_NzzQMJy7yC7UNzGMv_YaUrhQFXypX9rYG_o8AsUa0rsp5_o-0u3zvX1w6URmPAAwULuIE2o8d49ycFtmrJius3wCP7ri0CmbAhgvLvhkdq79_HoKUivu5JsvMQqfJyGAYCYm7WrkNCFwaEKisu_c30LWdWjFKUoW8diGVPDe63PHGjaLzAho8gdlt5GjLPlUEpg8RTQwpzs7H9dasGo2Y-zKeDysOYSGE6u_wzr0ezTXlI3HafjNeHVUsBon4FLva2mQC5cHV2e7fiMzLaTlUVhQupQxddiKXm5RnMRPzrETcQ=w1390-h919"} alt="ava" />
           </IconBox>
           <Card sx={{ minWidth: "220px"}}>
             <CardContent sx={{ textAlign: "left" }}>
