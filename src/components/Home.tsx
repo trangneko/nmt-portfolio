@@ -3,29 +3,21 @@ import logo from "./../ava.jpg";
 import {
   Container,
   Divider,
-  styled,
   Typography,
 } from "@mui/material";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
 import About from "./About";
-
-const FullHeightContainer = styled(Container)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  minHeight: `calc(100vh - ${theme.spacing(8)})`,
-  textAlign: "center",
-}));
-
+import Contact from "./Contact";
+import { FullHeightContainer } from "./Containers";
 
 const Home: React.FC = () => {
   return (
-    <Container>
+    <Container sx={{ mb: 6 }}>
       <FullHeightContainer>
-        <img src={logo} className="App-logo" alt="logo" />
-        <Typography variant="h2" component="h1" sx={{ my: 4 }} gutterBottom>
-          Hi, I am Nguyen Minh Trang - A Web Design Enthusiast from Vietnam.
+        <img src={logo} className="App-logo" alt="logo"/>
+        <Typography variant="h2" component="h1" sx={{ my: 4, fontSize: {xs: "2.7rem", md: "3.75rem"}}} gutterBottom>
+          Hi, I am Nguyen Minh Trang - <br />
+          A Web Design Enthusiast from Vietnam.
         </Typography>
         <Typography variant="h4">
           Explore my work and get to know me.
@@ -43,6 +35,8 @@ const Home: React.FC = () => {
       </FullHeightContainer>
 
       <About />
+
+      <Contact />
     </Container>
   );
 };

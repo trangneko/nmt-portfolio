@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>

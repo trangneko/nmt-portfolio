@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Avatar,
   Box,
   Card,
   CardContent,
@@ -16,14 +15,8 @@ import {
 import CakeRoundedIcon from "@mui/icons-material/CakeRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import MailRoundedIcon from "@mui/icons-material/MailRounded";
-
-const TwoColContainer = styled(Container)(({ theme }) => ({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center", // Align vertically centered
-  gap: theme.spacing(4),
-  padding: theme.spacing(4),
-}));
+import { IconBox, IconContainer, IconImage } from "./Icons";
+import { TwoColContainer } from "./Containers";
 
 const FuriganaTypography = styled(Typography)(({ theme }) => ({
   "& ruby": {
@@ -31,36 +24,10 @@ const FuriganaTypography = styled(Typography)(({ theme }) => ({
     whiteSpace: "nowrap",
     fontSize: "0.8em",
     "& rt": {
-      fontSize: "0.6em", // Adjust size of furigana text
+      fontSize: "0.6em",
       color: theme.palette.text.secondary,
     },
   },
-}));
-
-const IconContainer = styled(List)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  gap: theme.spacing(2), // Adjust spacing between icons
-}));
-
-const IconBox = styled(ListItem)<{ whiteBackground?: boolean }>(
-  ({ theme, whiteBackground }) => ({
-    width: 60, // Size of the icon container
-    height: 60,
-    backgroundColor: whiteBackground ? "white" : "rgba(0, 0, 0, 0.1)",
-    borderRadius: "20%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: whiteBackground ? theme.spacing(1) : 0,
-    overflow: "hidden",
-  })
-);
-
-const IconImage = styled("img")(({ theme }) => ({
-  width: "100%", // Image should fit inside the container
-  height: "100%",
-  objectFit: "contain",
 }));
 
 const TitleBox = styled(Box)(({ theme }) => ({
@@ -113,9 +80,30 @@ const EducationItem: React.FC<EducationItemProps> = ({
   icons = [],
 }) => {
   return (
-    <Box sx={{ display: "flex", gap: "2rem", my: 4 }}>
+    <Box
+      sx={{
+        display: "flex",
+        my: 4,
+        gap: {
+          xs: "1rem",
+          md: "2rem",
+        },
+        flexDirection: {
+          xs: isSkill ? "column" : "row",
+          md: "row",
+        },
+      }}
+    >
       <Box minWidth={150}>
-        <Typography variant="h6" sx={{ mb: 2 }}>
+        <Typography
+          variant="h6"
+          sx={{
+            mb: {
+              xs: isSkill ? 0 : 2,
+              md: 2,
+            },
+          }}
+        >
           {dateRange}
         </Typography>
         {!isSkill && (
@@ -125,15 +113,29 @@ const EducationItem: React.FC<EducationItemProps> = ({
         )}
       </Box>
       <Box>
-        <Typography variant="h6" sx={{ mb: 2 }}>
+        <Typography
+          variant="h6"
+          sx={{
+            mb: {
+              xs: isSkill ? 1 : 2,
+              md: 2,
+            },
+          }}
+        >
           {title}
         </Typography>
         <Typography>{description}</Typography>
         {isSkill && icons.length > 0 && (
-          <IconContainer sx={{ flexWrap: 'wrap' }}>
+          <IconContainer sx={{ flexWrap: "wrap" }}>
             {icons.map((icon, index) => (
               <Tooltip key={index} title={icon.alt} arrow>
-                <IconBox sx={icon.whiteBackground ? { backgroundColor: "white", padding:"5px" } : null}>
+                <IconBox
+                  sx={
+                    icon.whiteBackground
+                      ? { backgroundColor: "white", padding: "5px" }
+                      : null
+                  }
+                >
                   <IconImage src={icon.src} alt={icon.alt} />
                 </IconBox>
               </Tooltip>
@@ -145,22 +147,54 @@ const EducationItem: React.FC<EducationItemProps> = ({
   );
 };
 
+const VerticalDivider = styled(Divider)(({ theme }) => ({
+  width: "10px",
+  height: "120px",
+  backgroundColor: theme.palette.primary.main,
+  marginRight: theme.spacing(2),
+}));
+
+interface LanguageProficiencyItemProps {
+  language: string;
+  proficiency: string;
+  certifications: string | React.ReactNode;
+}
+
+const LanguageProficiencyItem: React.FC<LanguageProficiencyItemProps> = ({
+  language,
+  proficiency,
+  certifications,
+}) => {
+  return (
+    <ListItem sx={{ display: "flex", alignItems: "start" }}>
+      <VerticalDivider orientation="vertical" />
+      <Box>
+        <Typography variant="h6" sx={{ mb: 2 }}>
+          {language}
+        </Typography>
+        <Typography>{proficiency}</Typography>
+        <Typography>{certifications}</Typography>
+      </Box>
+    </ListItem>
+  );
+};
+
 const mdkSkills = [
-  { src: '/images/icons/html-5.svg', alt: 'HTML', whiteBackground: true},
-  { src: '/images/icons/css-3.svg', alt: 'CSS', whiteBackground: true},
-  { src: '/images/icons/javascript.svg', alt: 'JavaScript'},
-  { src: '/images/icons/dart.svg', alt: 'Dart', whiteBackground: true},
-  { src: '/images/icons/react.svg', alt: 'React.js'},
-  { src: '/images/icons/vue.svg', alt: 'Vue.js', whiteBackground: true},
-  { src: '/images/icons/flutter.svg', alt: 'Flutter', whiteBackground: true},
+  { src: "/images/icons/html-5.svg", alt: "HTML", whiteBackground: true },
+  { src: "/images/icons/css-3.svg", alt: "CSS", whiteBackground: true },
+  { src: "/images/icons/javascript.svg", alt: "JavaScript" },
+  { src: "/images/icons/dart.svg", alt: "Dart", whiteBackground: true },
+  { src: "/images/icons/react.svg", alt: "React.js" },
+  { src: "/images/icons/vue.svg", alt: "Vue.js", whiteBackground: true },
+  { src: "/images/icons/flutter.svg", alt: "Flutter", whiteBackground: true },
 ];
 
 const About = () => {
   return (
-    <Container>
-      <TwoColContainer>
-        <Container sx={{ textAlign: "left" }}>
-          <FuriganaTypography variant="h3" sx={{ my: 4 }}>
+    <Container sx={{my: 6}}>
+      <TwoColContainer sx={{ flexDirection: {xs: "column-reverse", md: "row"}}}>
+        <Box sx={{ textAlign: "left" }}>
+          <FuriganaTypography variant="h3" sx={{ my: 4, fontSize: {xs: "2.5rem", md: "3rem"} }}>
             <ruby>
               <rt>グエン・ミン・チャン</rt>NGUYEN MINH TRANG
             </ruby>
@@ -176,11 +210,13 @@ const About = () => {
             internship or job opportunities in web design, web-application and
             mobile application development.
           </Typography>
-        </Container>
+        </Box>
 
-        <Container>
-          <Avatar sx={{ width: 100, height: 100 }} />
-          <Card>
+        <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column", gap: 2}}>
+          <IconBox sx={{ width: 180, height: 180}}>
+            <IconImage src="/images/ava.jpg" alt="ava" />
+          </IconBox>
+          <Card sx={{ minWidth: "220px"}}>
             <CardContent sx={{ textAlign: "left" }}>
               <Typography variant="body2">
                 <CakeRoundedIcon sx={{ marginRight: 1 }} />
@@ -196,7 +232,7 @@ const About = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Container>
+        </Box>
       </TwoColContainer>
 
       <Divider
@@ -208,8 +244,18 @@ const About = () => {
         }}
       />
 
-      <TwoColContainer>
-        <Container sx={{ textAlign: "left" }}>
+      {/* software skills */}
+      <TwoColContainer
+        sx={{
+          flexDirection: {
+            xs: "column",
+            md: "row"
+          },
+          alignItems: { xs: "start", md: "center" },
+          mb: 8,
+        }}
+      >
+        <Box sx={{ textAlign: "left" }}>
           <TitleBox>
             <TitleTypography variant="h4">SOFTWARE</TitleTypography>
           </TitleBox>
@@ -217,7 +263,7 @@ const About = () => {
           <TitleBox>
             <TitleTypography variant="h4">SKILLS</TitleTypography>
           </TitleBox>
-        </Container>
+        </Box>
         <IconContainer>
           <Tooltip title="Photoshop" arrow>
             <IconBox>
@@ -272,75 +318,132 @@ const About = () => {
         </IconContainer>
       </TwoColContainer>
 
-      <TwoColContainer sx={{ textAlign: "left" }}>
-        <Box sx={{ display: "flex", gap: "1rem" }}>
-          <Container sx={{ width: "40%"}}>
-            <TitleBox>
-              <TitleTypography variant="h4">EDUCATION</TitleTypography>
-            </TitleBox>
-            <EducationItem
-              dateRange="4/2021 - NOW"
-              imageSrc="/images/icons/dhu.jpg"
-              altText="Digital Hollywood University"
-              title="UNDERGRADUATE"
-              description={
-                <>
-                  Digital Hollywood University
-                  <br />
-                  Faculty of Digital Communication
-                  <br />
-                  Department of Digital Content
-                </>
-              }
-              backgroundColor="#ec6b04" // Optional custom background color
-              isSkill={false}
-            />
-            <EducationItem
-              dateRange="9/2016 - 5/2019"
-              imageSrc="/images/icons/cnn.png"
-              altText="Foreign Language Specialized School"
-              title="HIGH SCHOOL DIPLOMA"
-              description="Foreign Language Specialized School"
-              isSkill={false}
-            />
-          </Container>
-
-          <Divider
-            orientation="vertical"
-            sx={{
-              width: "4px",
-              height: "600px",
-              backgroundColor: "primary.main",
-            }}
+      <Box
+        sx={{
+          display: "flex",
+          textAlign: "left",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+          gap: {
+            xs: "2rem",
+            md: "1rem",
+          },
+        }}
+      >
+        {/* education */}
+        <Container sx={{ width: { xs: "100%", md: "40%" } }}>
+          <TitleBox>
+            <TitleTypography variant="h4">EDUCATION</TitleTypography>
+          </TitleBox>
+          <EducationItem
+            dateRange="4/2021 - NOW"
+            imageSrc="/images/icons/dhu.jpg"
+            altText="Digital Hollywood University"
+            title="UNDERGRADUATE"
+            description={
+              <>
+                Digital Hollywood University
+                <br />
+                Faculty of Digital Communication
+                <br />
+                Department of Digital Content
+              </>
+            }
+            backgroundColor="#ec6b04" // Optional custom background color
+            isSkill={false}
           />
+          <EducationItem
+            dateRange="9/2016 - 5/2019"
+            imageSrc="/images/icons/cnn.png"
+            altText="Foreign Language Specialized School"
+            title="HIGH SCHOOL DIPLOMA"
+            description="Foreign Language Specialized School"
+            isSkill={false}
+          />
+        </Container>
 
-<Container>
-            <TitleBox>
-              <TitleTypography variant="h4">EXPERIENCES</TitleTypography>
-            </TitleBox>
-            <EducationItem
-              dateRange="5/2023 - NOW"
-              title="PART-TIME WEB DEVELOPER"
-              description={
-                <>
-                  MANDARAKE
-                </>
-              }
-              backgroundColor="#ec6b04" // Optional custom background color
-              isSkill={true} icons={mdkSkills}
-            />
-            <EducationItem
-              dateRange="11/2021 - 12/2021"
-              title="PART-TIME GRAPHIC DESGINER"
-              description="LYYM BEAUTY CORP"
-              isSkill={true}
-              icons={[
-                { src: '/images/icons/adobe-photoshop.svg', alt: 'Photoshop'},
-                { src: '/images/icons/adobe-illustrator.svg', alt: 'Illustrator'}]}
-            />
-          </Container>
-        </Box>
-      </TwoColContainer>
+        <Divider
+          orientation="vertical"
+          sx={{
+            width: { xs: "80%", md: "4px" },
+            height: { xs: "auto", md: "600px" },
+            backgroundColor: "primary.main",
+            alignSelf: "center",
+          }}
+        />
+
+        {/* exp */}
+        <Container>
+          <TitleBox>
+            <TitleTypography variant="h4">EXPERIENCES</TitleTypography>
+          </TitleBox>
+          <EducationItem
+            dateRange="5/2023 - NOW"
+            title="PART-TIME WEB DEVELOPER"
+            description={<>MANDARAKE</>}
+            backgroundColor="#ec6b04" // Optional custom background color
+            isSkill={true}
+            icons={mdkSkills}
+          />
+          <EducationItem
+            dateRange="11/2021 - 12/2021"
+            title="PART-TIME GRAPHIC DESGINER"
+            description="LYYM BEAUTY CORP"
+            isSkill={true}
+            icons={[
+              { src: "/images/icons/adobe-photoshop.svg", alt: "Photoshop" },
+              {
+                src: "/images/icons/adobe-illustrator.svg",
+                alt: "Illustrator",
+              },
+            ]}
+          />
+        </Container>
+      </Box>
+
+      {/* languages */}
+      <Box sx={{ my: 4,  textAlign: "left"}}>
+        <TitleBox>
+          <TitleTypography variant="h4">LANGUAGES</TitleTypography>
+        </TitleBox>
+        <List
+          sx={{
+            display: "flex",
+            alignItems: "start",
+            justifyContent: "space-between",
+            flexDirection: {
+              xs: "column", md: "row"
+            },
+            gap:  {
+              xs: 2
+            },
+          }}
+        >
+          <LanguageProficiencyItem
+            language="ENGLISH"
+            proficiency="Professional Working Proficiency"
+            certifications={
+              <>
+                TOEIC L&R 910/990 (4/2021)
+                <br />
+                TOEIC S&W 290/400 (11/2020)
+              </>
+            }
+          />
+          <LanguageProficiencyItem
+            language="JAPANESE"
+            proficiency="Professional Working Proficiency"
+            certifications="JLPT N2 (12/2020)"
+          />
+          <LanguageProficiencyItem
+            language="VIETNAMESE"
+            proficiency="Native Proficiency"
+            certifications=""
+          />
+        </List>
+      </Box>
     </Container>
   );
 };
