@@ -193,16 +193,21 @@ const mdkSkills = [
 
 const About = () => {
   return (
-    <Container sx={{my: 6}}>
-      <TwoColContainer sx={{ flexDirection: {xs: "column-reverse", md: "row"}}}>
+    <Container sx={{ my: 6 }}>
+      <TwoColContainer
+        sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}
+      >
         <Box sx={{ textAlign: "left" }}>
-          <FuriganaTypography variant="h3" sx={{ my: 4, fontSize: {xs: "2.5rem", md: "3rem"} }}>
+          <FuriganaTypography
+            variant="h3"
+            sx={{ my: 4, fontSize: { xs: "2.5rem", md: "3rem" } }}
+          >
             <ruby>
               <rt>グエン・ミン・チャン</rt>NGUYEN MINH TRANG
             </ruby>
           </FuriganaTypography>
           <Typography variant="body1">
-            I am currently a third-year student at Digital Hollywood University
+            I am currently a fourth-year student at Digital Hollywood University
             in Tokyo, primarily focusing on web design. My passion for the
             creative field started in high school, and during my time at
             university, I discovered a new passion for web development. In my
@@ -214,11 +219,23 @@ const About = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column", gap: 2}}>
-          <IconBox sx={{ width: 180, height: 180}}>
-            <IconImage src={"https://lh3.googleusercontent.com/fife/ALs6j_FuINOnesmk3ggdhyVyZEASZO5OhmQG2t7msc02oxJlsq2gp4t6H56ih3EEs2AeNU3WYx66VIdRChDHD25iFqQVX-l0bpYS_TXzfXQXBkQeih8dmfdHyu_yZlGAwJvi8wwBXRG8_5XC16A2rmc1q2d5Ak5I4oL3lx3Is-w-u0navMzMPHlB4Vl-AlG_pc-LDdg4pjdYugkylDpmktZ2tpiKfq2wUm2o7mV0b402fkcQ4AblA8t16hb58cv4B9plYa_KaFU4XoDQ7Sci75ftY6ZP-S03EBhY59apsm_uhgTp9FKkBRFNvCry3Fau80Wzo6nyUR7u1tmVQ_kZDCTPeuJSDWMkgnbdqdtNB6g19-B_mdEGasLxB_H1pWv8QHoxjlXf2UbEwiTMU4VOjAswWbe4z_s1aAE7EN9zQA3CsNtMtQvUoJeBA2a6MrKrWxQGUnPmnEBKOdaNPLt4ss7rzfM9jHtD4VXVOlOthU57hsAzcIj7tMF_hbDmVpsFoZLV13rpPIIB3pb4wAL4HHsTQ8mtr3jWDkmziKsua47fcgf_14cpfWwWhPg6MlXH54B2WbacbSbqzsrcFaOVSLvR2Jicsfxek7ydojmqWL97XAyp_OmKkI8BzgahRf30Ipi5S3N0tJ5oFyLsY2oRbj3ZjLgaHK3uMzoyBGlSyJBUPyg1pBa-azi5DxoZQ9JDnpjL1SUHd1tVvX3lIBjVvXy5pi5DvMNNpY9P-1TJSja87Loy9Pot0vawuLUZl2rQu-S57TO-YhlT16W9QxHzKnqcNYDlBZ-mmVd6OtViLoeu1jKQCHes6rkJ0sOzlWUF-fJCMaUTU4DiW6wIeLdUBoMdMudZwd1rAHVNNrKTFqa7sXF-ngDlOg03I7pDf1Yjpb5H_MUlMMFHMwx1cLwut2km89x2Ca2x5HdBbaIEnaNEYxRwQ0BuUkvTlGyEYRNHUO-vUollHZjoPh_y4ZrX8KxSXBfXHkcsgMImW6gkVbXqYTBs5uizoJeOZEmdqgxAGghC6hSl_9j3clzAbsPepGf5GtQEWqlaTM3ByKTubMABr4LmTNjO3EVD0fhyRgU7xdZsFaEXPT8bNU5XltMdWV8Q6Wk_hAsdHdHVvWvcihoJmKeae-b-tavhEWzkFJ1POz1cHpdBrF2gI2TdKgOUEoyvWlIcuoh2yp0JDEobMBQqdNw-FlJSNcEWvAQ-Me9qaRjdzeYfXHl9NWfo522ZKBarqyq2JATRBXSKkYagKhZsLw7X8SyVYUSDhtM-_NeqIO2J_-ISXm-todVz01If5XMgXkF68EcczWYq-W7-eBH_NzzQMJy7yC7UNzGMv_YaUrhQFXypX9rYG_o8AsUa0rsp5_o-0u3zvX1w6URmPAAwULuIE2o8d49ycFtmrJius3wCP7ri0CmbAhgvLvhkdq79_HoKUivu5JsvMQqfJyGAYCYm7WrkNCFwaEKisu_c30LWdWjFKUoW8diGVPDe63PHGjaLzAho8gdlt5GjLPlUEpg8RTQwpzs7H9dasGo2Y-zKeDysOYSGE6u_wzr0ezTXlI3HafjNeHVUsBon4FLva2mQC5cHV2e7fiMzLaTlUVhQupQxddiKXm5RnMRPzrETcQ=w1390-h919"} alt="ava" />
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            gap: 2,
+          }}
+        >
+          <IconBox sx={{ width: 180, height: 180 }}>
+            <IconImage
+              src={
+                "https://lh3.googleusercontent.com/fife/ALs6j_FuINOnesmk3ggdhyVyZEASZO5OhmQG2t7msc02oxJlsq2gp4t6H56ih3EEs2AeNU3WYx66VIdRChDHD25iFqQVX-l0bpYS_TXzfXQXBkQeih8dmfdHyu_yZlGAwJvi8wwBXRG8_5XC16A2rmc1q2d5Ak5I4oL3lx3Is-w-u0navMzMPHlB4Vl-AlG_pc-LDdg4pjdYugkylDpmktZ2tpiKfq2wUm2o7mV0b402fkcQ4AblA8t16hb58cv4B9plYa_KaFU4XoDQ7Sci75ftY6ZP-S03EBhY59apsm_uhgTp9FKkBRFNvCry3Fau80Wzo6nyUR7u1tmVQ_kZDCTPeuJSDWMkgnbdqdtNB6g19-B_mdEGasLxB_H1pWv8QHoxjlXf2UbEwiTMU4VOjAswWbe4z_s1aAE7EN9zQA3CsNtMtQvUoJeBA2a6MrKrWxQGUnPmnEBKOdaNPLt4ss7rzfM9jHtD4VXVOlOthU57hsAzcIj7tMF_hbDmVpsFoZLV13rpPIIB3pb4wAL4HHsTQ8mtr3jWDkmziKsua47fcgf_14cpfWwWhPg6MlXH54B2WbacbSbqzsrcFaOVSLvR2Jicsfxek7ydojmqWL97XAyp_OmKkI8BzgahRf30Ipi5S3N0tJ5oFyLsY2oRbj3ZjLgaHK3uMzoyBGlSyJBUPyg1pBa-azi5DxoZQ9JDnpjL1SUHd1tVvX3lIBjVvXy5pi5DvMNNpY9P-1TJSja87Loy9Pot0vawuLUZl2rQu-S57TO-YhlT16W9QxHzKnqcNYDlBZ-mmVd6OtViLoeu1jKQCHes6rkJ0sOzlWUF-fJCMaUTU4DiW6wIeLdUBoMdMudZwd1rAHVNNrKTFqa7sXF-ngDlOg03I7pDf1Yjpb5H_MUlMMFHMwx1cLwut2km89x2Ca2x5HdBbaIEnaNEYxRwQ0BuUkvTlGyEYRNHUO-vUollHZjoPh_y4ZrX8KxSXBfXHkcsgMImW6gkVbXqYTBs5uizoJeOZEmdqgxAGghC6hSl_9j3clzAbsPepGf5GtQEWqlaTM3ByKTubMABr4LmTNjO3EVD0fhyRgU7xdZsFaEXPT8bNU5XltMdWV8Q6Wk_hAsdHdHVvWvcihoJmKeae-b-tavhEWzkFJ1POz1cHpdBrF2gI2TdKgOUEoyvWlIcuoh2yp0JDEobMBQqdNw-FlJSNcEWvAQ-Me9qaRjdzeYfXHl9NWfo522ZKBarqyq2JATRBXSKkYagKhZsLw7X8SyVYUSDhtM-_NeqIO2J_-ISXm-todVz01If5XMgXkF68EcczWYq-W7-eBH_NzzQMJy7yC7UNzGMv_YaUrhQFXypX9rYG_o8AsUa0rsp5_o-0u3zvX1w6URmPAAwULuIE2o8d49ycFtmrJius3wCP7ri0CmbAhgvLvhkdq79_HoKUivu5JsvMQqfJyGAYCYm7WrkNCFwaEKisu_c30LWdWjFKUoW8diGVPDe63PHGjaLzAho8gdlt5GjLPlUEpg8RTQwpzs7H9dasGo2Y-zKeDysOYSGE6u_wzr0ezTXlI3HafjNeHVUsBon4FLva2mQC5cHV2e7fiMzLaTlUVhQupQxddiKXm5RnMRPzrETcQ=w1390-h919"
+              }
+              alt="ava"
+            />
           </IconBox>
-          <Card sx={{ minWidth: "220px"}}>
+          <Card sx={{ minWidth: "220px" }}>
             <CardContent sx={{ textAlign: "left" }}>
               <Typography variant="body2">
                 <CakeRoundedIcon sx={{ marginRight: 1 }} />
@@ -251,7 +268,7 @@ const About = () => {
         sx={{
           flexDirection: {
             xs: "column",
-            md: "row"
+            md: "row",
           },
           alignItems: { xs: "start", md: "center" },
           mb: 8,
@@ -384,7 +401,19 @@ const About = () => {
           <EducationItem
             dateRange="5/2023 - NOW"
             title="PART-TIME WEB DEVELOPER"
-            description={<>MANDARAKE</>}
+            description={
+              <>
+               <Typography variant="subtitle1">MANDARAKE</Typography>
+                <List>
+                  <ListItem>Advertisement and banner design</ListItem>
+                  <ListItem>
+                    Web design, renewal, and wireframe creation
+                  </ListItem>
+                  <ListItem>Front-end engineering</ListItem>
+                  <ListItem>Internal mobile app development</ListItem>
+                </List>
+              </>
+            }
             backgroundColor="#ec6b04" // Optional custom background color
             isSkill={true}
             icons={mdkSkills}
@@ -392,7 +421,14 @@ const About = () => {
           <EducationItem
             dateRange="11/2021 - 12/2021"
             title="PART-TIME GRAPHIC DESGINER"
-            description="LYYM BEAUTY CORP"
+            description={
+              <>
+                <Typography variant="subtitle1">LYYM BEAUTY CORP</Typography>
+                <Typography>
+                  Design of advertisements, posts, and printed materials
+                </Typography>
+              </>
+            }
             isSkill={true}
             icons={[
               { src: "/images/icons/adobe-photoshop.svg", alt: "Photoshop" },
@@ -406,7 +442,7 @@ const About = () => {
       </Box>
 
       {/* languages */}
-      <Box sx={{ my: 4,  textAlign: "left"}}>
+      <Box sx={{ my: 4, textAlign: "left" }}>
         <TitleBox>
           <TitleTypography variant="h4">LANGUAGES</TitleTypography>
         </TitleBox>
@@ -416,10 +452,11 @@ const About = () => {
             alignItems: "start",
             justifyContent: "space-between",
             flexDirection: {
-              xs: "column", md: "row"
+              xs: "column",
+              md: "row",
             },
-            gap:  {
-              xs: 2
+            gap: {
+              xs: 2,
             },
           }}
         >
