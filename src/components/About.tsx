@@ -96,7 +96,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
         },
       }}
     >
-      <Box minWidth={150}>
+      <Box minWidth={{xs: 100, md: 150}}>
         <Typography
           variant="h6"
           sx={{
@@ -404,7 +404,7 @@ const About = () => {
             description={
               <>
                <Typography variant="subtitle1">MANDARAKE</Typography>
-                <List>
+                <List sx={{ listStyle: "inside"}}>
                   <ListItem>Advertisement and banner design</ListItem>
                   <ListItem>
                     Web design, renewal, and wireframe creation

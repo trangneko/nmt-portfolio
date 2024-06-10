@@ -86,7 +86,7 @@ const Projects = () => {
       description:
         "A React.js-based webpage consolidating information about Mandarake's mid-career recruitment which was transformed from multiple static HTML pages into a cohesive single-page application.",
         role: "Frontend Developer",
-        time: "9/2024 - 11/2024",
+        time: "9/2023 - 11/2023",
       image:
         "https://lh3.googleusercontent.com/fife/ALs6j_FWEwd383XHmQ4ImDNdarqlE5Vy1uBw50DlVkogGG-MClmbHX50_610IABv2i1GmpJa7hhEzZwf8adbNUc2A4z10yp8nesUENT3jMiXyBzXs5hLDF9v2SVb62_FRu5JJFsUkEpDIxEaUbE6uds2xSWPSvG9w3c1RUqHTaOijPdELvF8zyRM95mVQrUhlT9fsHV2EFZXsaZK2yyRS0knPxHlqjx39-fZH4u5tbT6H5aHQMehQJG1gmhIu8Q_dGPLF7_JHvCQwOlsBwTe_y4t08eGOFqPz6SX7wZP7ox1rYvtl0q51-qZlaWVdNIu0qGMXRtjwPyhP7QKCn7ruE_u70UpGjUR1RQJuajs80_3mcdrCq97lLxNuG0rH4ciRUIo67POlQQXhyR7NEsmfaB9XiB7Jpe_k38iF-IA2D5sAj6kQ6osvQVsDa144HcWlQJftRK3eR2PbWEt5i8Rnf3Vlm171WPMvM5O7uUXzTZsQxqS1kznfG1mUDU1ypKf20SGony3TgUXBe7hyazgoECMUw4b9Sg0DSeJ5AXpbm_tsxLpbzX0lnvG1SY-R1zpv6LXssJY2v17EMuLuewa8WHYqTXKvM_GW3PTou2u2QEwhxSvIbaF5NAuy8460RLCmmPclwbo69r0JfnP5WqslZwqMLQZpGcYpvsDobkVoMBXlmRjLjEA5EommsO0_XNCYhft-2Tf1zfZX-N9qHrD3c5lezbjxJn_Zv862jphL6k1jBFv9zboEXNlwfEpD4WwZmaxowSqL2VYIG9JozZkFHGc6fKmBkhICtvlhAcRP7Bj9au7aqppLFwwpEI59q8HUI0eC0HlthinCuiECeaXFY0Pc7vIX0RrGn6t2ngb4K8V24d0om78CNprPlrE0eS4WRnTLwyFi6wmhg8TddGfUzygBs0QFaYgiaZ3hLsko52Q_T7zbVWBm9NbWWPugjk85kunMFKSHkw9kyfs-XtWiV-UM0vze65-wtwlLLFDcH6v0Gq8SsTD85Y_VlwIRfwtjTf9TKfDaJXyOILymrwi_hKAIgqC60vtfMWyf_ATNRIdwwQ5sbEjaVxuydR6lKPXC4pHIsIYlgvY5S3ZwVy-kg8AxvmCKQrt7CazAHn3ty-oENt3Bv1EhEuZGs_W6wJ3abRwLlRxYc9aeEmKKVZ4jQdP1s9jkf5puTTDuAfo6dqmJXlZt0dHZtBuZCJQFBBDikUqjsjilxsi1DJXAfqZUF96VqyoTLYLEgMdF308GN3NMxwYdKJP_SggUe0JEaMD1PDgSAXwAKl0pz-JWFHYQ9Hyt88fSndgNe3eIi34d5bea5lyiyd5af3HHoxvwWWwLexrAXsoTeH1KeSytat0sMpzZq1Y4Rpct5PT7NXWd94tVJBLxDk5P1hCu-zBnyy9-CbPI_NCukStMIuVKFFtbc9NJZ2NPhLx2cPmRWEg5QGr9W8WuZ9G2D8ZA9MePzXT0pjGJxZNIA1scwvuLBsolID_jLzbksJpH4UlTFvIlqtEDk64yICVS_yoYL_4RfBGJ3vMdrFc_qL9xDB4MdbzjjSIz2wlWR72r9DO-0OFcwXM4yxDPeyXQw83yUk0RkGoBtk0aSi1-R_d5JSsRToEyps=w1390-h919",
       url: "https://www.mandarake.co.jp/recruit/mid/",
@@ -98,7 +98,7 @@ const Projects = () => {
       description:
         "A React.js based webpage compiles information about anime adaptations for each season. Within each anime's details, there is a section that features related items available for purchase through Mandarake.",
         role: "Frontend Developer",
-        time: "7/2024 - 8/2024",
+        time: "7/2023 - 8/2023",
       image:
         "https://media.licdn.com/dms/image/D4D2DAQFfKl3eyirfug/profile-treasury-image-shrink_800_800/0/1695784725572?e=1718571600&v=beta&t=RGgDh_Qmn4jWfPDSllubnoht_Kqm7-F05tDbEMEof6s",
       url: "https://www.mandarake.co.jp/feature/media",
