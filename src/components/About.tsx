@@ -214,7 +214,7 @@ const About = () => {
 
         <Box sx={{ display: "flex", alignItems: "center", flexDirection: "column", gap: 2}}>
           <IconBox sx={{ width: 180, height: 180}}>
-            <IconImage src="/images/ava.jpg" alt="ava" />
+            <IconImage src={"/images/ava.jpg"} alt="ava" />
           </IconBox>
           <Card sx={{ minWidth: "220px"}}>
             <CardContent sx={{ textAlign: "left" }}>
