@@ -9,7 +9,7 @@ import {
   ListItem,
   styled,
 } from "@mui/material";
-import { TwoColContainer } from "./Containers";
+import { TwoColContainer, UnderlinedTypography } from "./Containers";
 import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
 import { ReactComponent as GmailIcon } from "../assets/gmail.svg";
 import { ReactComponent as GitHubIcon } from "../assets/github-square.svg";
@@ -58,9 +58,9 @@ const IconLink: React.FC<IconLinkProps> = ({ href, icon, text }) => {
 const Contact = () => {
   return (
     <Container sx={{ py: 4 }}>
-      <Typography variant="h3" component="h1" gutterBottom>
+      <UnderlinedTypography variant="h3" gutterBottom>
         CONTACT ME
-      </Typography>
+      </UnderlinedTypography>
       <TwoColContainer sx={{ justifyContent: "space-around" }}>
         <List>
           <IconLink

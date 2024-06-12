@@ -10,6 +10,7 @@ import {
   styled,
   Tooltip,
   Typography,
+  useTheme,
 } from "@mui/material";
 
 import CakeRoundedIcon from "@mui/icons-material/CakeRounded";
@@ -43,8 +44,10 @@ const TitleBox = styled(Box)(({ theme }) => ({
     left: "-10px",
     width: "95%",
     height: "70%",
-    backgroundColor: theme.palette.primary.dark,
-    zIndex: -1,
+    backgroundColor: theme.palette.info.main,
+    borderRadius: "20px", // Match the border radius of the main box
+    zIndex: -1, // Place behind the box
+    transition: "all 0.3s ease",
   },
 }));
 
@@ -65,6 +68,7 @@ interface EducationItemProps {
   imageSrc?: string;
   altText?: string;
   title: string;
+  company?: string;
   description: string | React.ReactNode;
   backgroundColor?: string;
   isSkill?: boolean;
@@ -76,6 +80,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
   imageSrc,
   altText,
   title,
+  company,
   description,
   backgroundColor = "rgba(0, 0, 0, 0.1)",
   isSkill = false,
@@ -86,17 +91,14 @@ const EducationItem: React.FC<EducationItemProps> = ({
       sx={{
         display: "flex",
         my: 4,
-        gap: {
-          xs: "1rem",
-          md: "2rem",
-        },
+        gap: "1rem",
         flexDirection: {
           xs: isSkill ? "column" : "row",
           md: "row",
         },
       }}
     >
-      <Box minWidth={{xs: 100, md: 150}}>
+      <Box minWidth={{ xs: 100, md: 180 }}>
         <Typography
           variant="h6"
           sx={{
@@ -126,6 +128,13 @@ const EducationItem: React.FC<EducationItemProps> = ({
         >
           {title}
         </Typography>
+        {company ? <><Typography
+          variant="subtitle1"
+          textAlign={"right"}
+        >
+          at {company} (Tokyo, Japan)
+        </Typography>
+        <Typography sx={{ my: 2}}>What I did:</Typography></> : null}
         <Typography>{description}</Typography>
         {isSkill && icons.length > 0 && (
           <IconContainer sx={{ flexWrap: "wrap" }}>
@@ -195,7 +204,7 @@ const About = () => {
   return (
     <Container sx={{ my: 6 }}>
       <TwoColContainer
-        sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}
+        sx={{ flexDirection: { xs: "column-reverse", md: "row" }, my: 4 }}
       >
         <Box sx={{ textAlign: "left" }}>
           <FuriganaTypography
@@ -227,25 +236,53 @@ const About = () => {
             gap: 2,
           }}
         >
-          <IconBox sx={{ width: 180, height: 180 }}>
-            <IconImage
-              src={
-                "https://lh3.googleusercontent.com/fife/ALs6j_FuINOnesmk3ggdhyVyZEASZO5OhmQG2t7msc02oxJlsq2gp4t6H56ih3EEs2AeNU3WYx66VIdRChDHD25iFqQVX-l0bpYS_TXzfXQXBkQeih8dmfdHyu_yZlGAwJvi8wwBXRG8_5XC16A2rmc1q2d5Ak5I4oL3lx3Is-w-u0navMzMPHlB4Vl-AlG_pc-LDdg4pjdYugkylDpmktZ2tpiKfq2wUm2o7mV0b402fkcQ4AblA8t16hb58cv4B9plYa_KaFU4XoDQ7Sci75ftY6ZP-S03EBhY59apsm_uhgTp9FKkBRFNvCry3Fau80Wzo6nyUR7u1tmVQ_kZDCTPeuJSDWMkgnbdqdtNB6g19-B_mdEGasLxB_H1pWv8QHoxjlXf2UbEwiTMU4VOjAswWbe4z_s1aAE7EN9zQA3CsNtMtQvUoJeBA2a6MrKrWxQGUnPmnEBKOdaNPLt4ss7rzfM9jHtD4VXVOlOthU57hsAzcIj7tMF_hbDmVpsFoZLV13rpPIIB3pb4wAL4HHsTQ8mtr3jWDkmziKsua47fcgf_14cpfWwWhPg6MlXH54B2WbacbSbqzsrcFaOVSLvR2Jicsfxek7ydojmqWL97XAyp_OmKkI8BzgahRf30Ipi5S3N0tJ5oFyLsY2oRbj3ZjLgaHK3uMzoyBGlSyJBUPyg1pBa-azi5DxoZQ9JDnpjL1SUHd1tVvX3lIBjVvXy5pi5DvMNNpY9P-1TJSja87Loy9Pot0vawuLUZl2rQu-S57TO-YhlT16W9QxHzKnqcNYDlBZ-mmVd6OtViLoeu1jKQCHes6rkJ0sOzlWUF-fJCMaUTU4DiW6wIeLdUBoMdMudZwd1rAHVNNrKTFqa7sXF-ngDlOg03I7pDf1Yjpb5H_MUlMMFHMwx1cLwut2km89x2Ca2x5HdBbaIEnaNEYxRwQ0BuUkvTlGyEYRNHUO-vUollHZjoPh_y4ZrX8KxSXBfXHkcsgMImW6gkVbXqYTBs5uizoJeOZEmdqgxAGghC6hSl_9j3clzAbsPepGf5GtQEWqlaTM3ByKTubMABr4LmTNjO3EVD0fhyRgU7xdZsFaEXPT8bNU5XltMdWV8Q6Wk_hAsdHdHVvWvcihoJmKeae-b-tavhEWzkFJ1POz1cHpdBrF2gI2TdKgOUEoyvWlIcuoh2yp0JDEobMBQqdNw-FlJSNcEWvAQ-Me9qaRjdzeYfXHl9NWfo522ZKBarqyq2JATRBXSKkYagKhZsLw7X8SyVYUSDhtM-_NeqIO2J_-ISXm-todVz01If5XMgXkF68EcczWYq-W7-eBH_NzzQMJy7yC7UNzGMv_YaUrhQFXypX9rYG_o8AsUa0rsp5_o-0u3zvX1w6URmPAAwULuIE2o8d49ycFtmrJius3wCP7ri0CmbAhgvLvhkdq79_HoKUivu5JsvMQqfJyGAYCYm7WrkNCFwaEKisu_c30LWdWjFKUoW8diGVPDe63PHGjaLzAho8gdlt5GjLPlUEpg8RTQwpzs7H9dasGo2Y-zKeDysOYSGE6u_wzr0ezTXlI3HafjNeHVUsBon4FLva2mQC5cHV2e7fiMzLaTlUVhQupQxddiKXm5RnMRPzrETcQ=w1390-h919"
-              }
-              alt="ava"
-            />
-          </IconBox>
+          <Box
+            sx={{
+              width: 200,
+              height: 200,
+              position: "relative",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                width: 180,
+                height: 180,
+                right: 0,
+                bottom: 0,
+                borderRadius: "20%",
+                border: `2px solid ${useTheme().palette.info.main}`,
+                zIndex: -1,
+              },
+            }}
+          >
+            <IconBox sx={{ width: 180, height: 180 }}>
+              <IconImage
+                src={
+                  "https://lh3.googleusercontent.com/fife/ALs6j_FuINOnesmk3ggdhyVyZEASZO5OhmQG2t7msc02oxJlsq2gp4t6H56ih3EEs2AeNU3WYx66VIdRChDHD25iFqQVX-l0bpYS_TXzfXQXBkQeih8dmfdHyu_yZlGAwJvi8wwBXRG8_5XC16A2rmc1q2d5Ak5I4oL3lx3Is-w-u0navMzMPHlB4Vl-AlG_pc-LDdg4pjdYugkylDpmktZ2tpiKfq2wUm2o7mV0b402fkcQ4AblA8t16hb58cv4B9plYa_KaFU4XoDQ7Sci75ftY6ZP-S03EBhY59apsm_uhgTp9FKkBRFNvCry3Fau80Wzo6nyUR7u1tmVQ_kZDCTPeuJSDWMkgnbdqdtNB6g19-B_mdEGasLxB_H1pWv8QHoxjlXf2UbEwiTMU4VOjAswWbe4z_s1aAE7EN9zQA3CsNtMtQvUoJeBA2a6MrKrWxQGUnPmnEBKOdaNPLt4ss7rzfM9jHtD4VXVOlOthU57hsAzcIj7tMF_hbDmVpsFoZLV13rpPIIB3pb4wAL4HHsTQ8mtr3jWDkmziKsua47fcgf_14cpfWwWhPg6MlXH54B2WbacbSbqzsrcFaOVSLvR2Jicsfxek7ydojmqWL97XAyp_OmKkI8BzgahRf30Ipi5S3N0tJ5oFyLsY2oRbj3ZjLgaHK3uMzoyBGlSyJBUPyg1pBa-azi5DxoZQ9JDnpjL1SUHd1tVvX3lIBjVvXy5pi5DvMNNpY9P-1TJSja87Loy9Pot0vawuLUZl2rQu-S57TO-YhlT16W9QxHzKnqcNYDlBZ-mmVd6OtViLoeu1jKQCHes6rkJ0sOzlWUF-fJCMaUTU4DiW6wIeLdUBoMdMudZwd1rAHVNNrKTFqa7sXF-ngDlOg03I7pDf1Yjpb5H_MUlMMFHMwx1cLwut2km89x2Ca2x5HdBbaIEnaNEYxRwQ0BuUkvTlGyEYRNHUO-vUollHZjoPh_y4ZrX8KxSXBfXHkcsgMImW6gkVbXqYTBs5uizoJeOZEmdqgxAGghC6hSl_9j3clzAbsPepGf5GtQEWqlaTM3ByKTubMABr4LmTNjO3EVD0fhyRgU7xdZsFaEXPT8bNU5XltMdWV8Q6Wk_hAsdHdHVvWvcihoJmKeae-b-tavhEWzkFJ1POz1cHpdBrF2gI2TdKgOUEoyvWlIcuoh2yp0JDEobMBQqdNw-FlJSNcEWvAQ-Me9qaRjdzeYfXHl9NWfo522ZKBarqyq2JATRBXSKkYagKhZsLw7X8SyVYUSDhtM-_NeqIO2J_-ISXm-todVz01If5XMgXkF68EcczWYq-W7-eBH_NzzQMJy7yC7UNzGMv_YaUrhQFXypX9rYG_o8AsUa0rsp5_o-0u3zvX1w6URmPAAwULuIE2o8d49ycFtmrJius3wCP7ri0CmbAhgvLvhkdq79_HoKUivu5JsvMQqfJyGAYCYm7WrkNCFwaEKisu_c30LWdWjFKUoW8diGVPDe63PHGjaLzAho8gdlt5GjLPlUEpg8RTQwpzs7H9dasGo2Y-zKeDysOYSGE6u_wzr0ezTXlI3HafjNeHVUsBon4FLva2mQC5cHV2e7fiMzLaTlUVhQupQxddiKXm5RnMRPzrETcQ=w1390-h919"
+                }
+                alt="ava"
+              />
+            </IconBox>
+          </Box>
           <Card sx={{ minWidth: "220px" }}>
             <CardContent sx={{ textAlign: "left" }}>
-              <Typography variant="body2" sx={{ display: "flex", alignItems: "center", mb:"3px"}}>
+              <Typography
+                variant="body2"
+                sx={{ display: "flex", alignItems: "center", mb: "3px" }}
+              >
                 <CakeRoundedIcon sx={{ marginRight: 1 }} />
                 2001.01.16
               </Typography>
-              <Typography variant="body2" sx={{ display: "flex", alignItems: "center", mb:"3px"}}>
+              <Typography
+                variant="body2"
+                sx={{ display: "flex", alignItems: "center", mb: "3px" }}
+              >
                 <LocationOnRoundedIcon sx={{ marginRight: 1 }} />
                 Tokyo, Japan
               </Typography>
-              <Typography variant="body2" sx={{ display: "flex", alignItems: "center"}}>
+              <Typography
+                variant="body2"
+                sx={{ display: "flex", alignItems: "center" }}
+              >
                 <MailRoundedIcon sx={{ marginRight: 1 }} />
                 lucideneko@gmail.com
               </Typography>
@@ -374,6 +411,14 @@ const About = () => {
             isSkill={false}
           />
           <EducationItem
+            dateRange="10/2019 - 3/2021"
+            imageSrc="/images/icons/olj.jpg"
+            altText="OLJ Language Academy"
+            title="JAPANESE LANGUAGE STUDY"
+            description="OLJ Language Academy"
+            isSkill={false}
+          />
+          <EducationItem
             dateRange="9/2016 - 5/2019"
             imageSrc="/images/icons/cnn.png"
             altText="Foreign Language Specialized School"
@@ -401,10 +446,10 @@ const About = () => {
           <EducationItem
             dateRange="5/2023 - NOW"
             title="PART-TIME WEB DEVELOPER"
+            company="Mandarake Inc."
             description={
               <>
-               <Typography variant="subtitle1">MANDARAKE</Typography>
-                <List sx={{ listStyle: "inside"}}>
+                <List sx={{ listStyle: "inside" }}>
                   <ListItem>Advertisement and banner design</ListItem>
                   <ListItem>
                     Web design, renewal, and wireframe creation
@@ -421,11 +466,11 @@ const About = () => {
           <EducationItem
             dateRange="11/2021 - 12/2021"
             title="PART-TIME GRAPHIC DESGINER"
+            company="株式会社LYYM BEAUTY"
             description={
               <>
-                <Typography variant="subtitle1">LYYM BEAUTY CORP</Typography>
                 <Typography>
-                  Design of advertisements, posts, and printed materials
+                Advertisements, Facebook posts, and printed materials design.
                 </Typography>
               </>
             }

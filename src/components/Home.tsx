@@ -1,36 +1,37 @@
 import React, { useRef } from "react";
 import logo from "./../ava.jpg";
-import {
-  Box,
-  Container,
-  Divider,
-  styled,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Divider, styled, Typography } from "@mui/material";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
 import About from "./About";
 import Contact from "./Contact";
-import { FullHeightContainer } from "./Containers";
+import { FullHeightContainer, UnderlinedTypography } from "./Containers";
 import ProjectFeature from "./ProjectFeature";
 
-const BouncingArrow = styled(KeyboardDoubleArrowDownRoundedIcon)(({ theme }) => ({
-  animation: 'bounce 2s infinite',
-  cursor: 'pointer',
-}));
+const BouncingArrow = styled(KeyboardDoubleArrowDownRoundedIcon)(
+  ({ theme }) => ({
+    animation: "bounce 2s infinite",
+    cursor: "pointer",
+  })
+);
 
 const Home: React.FC = () => {
   const nextSectionRef = useRef<HTMLDivElement | null>(null);
 
   const handleArrowClick = () => {
     if (nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <Container sx={{ mb: 6 }}>
       <FullHeightContainer>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img
+          src={logo}
+          className="App-logo"
+          alt="logo"
+          style={{ borderRadius: "20px" }}
+        />
         <Typography
           variant="h2"
           component="h1"
@@ -56,11 +57,14 @@ const Home: React.FC = () => {
       </FullHeightContainer>
 
       <Box ref={nextSectionRef} py={6}>
+        <UnderlinedTypography variant="h3">ABOUT ME</UnderlinedTypography>
         <About />
       </Box>
 
       <Box py={6}>
-        <Typography variant="h3">FEATURE PROJECTS</Typography>
+        <UnderlinedTypography variant="h3">
+          FEATURED PROJECTS
+        </UnderlinedTypography>
         <ProjectFeature />
       </Box>
 

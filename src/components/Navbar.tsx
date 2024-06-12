@@ -93,8 +93,8 @@ export default function Navbar() {
               color: theme.palette.primary.contrastText, 
             }}
           >
-            <IconBox>
-              <img src={logo} alt="icon" width={"100%"} />
+            <IconBox sx={{ margin: "5px"}}>
+              <img src={logo} alt="icon" width={"100%"}/>
             </IconBox>
             <Typography variant="h6" component="div" sx={{ color: "inherit" }}>
               Lucide's playground

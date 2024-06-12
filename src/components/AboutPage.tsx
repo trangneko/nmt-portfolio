@@ -1,10 +1,11 @@
 import { Container, Typography } from "@mui/material";
 import About from "./About";
+import { UnderlinedTypography } from "./Containers";
 
 const AboutPage = () => {
   return (
     <Container sx={{ py: 6}}>
-        <Typography variant="h2">ABOUT ME</Typography>
+        <UnderlinedTypography variant="h2">ABOUT ME</UnderlinedTypography>
       <About />
     </Container>
   );

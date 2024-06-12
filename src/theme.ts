@@ -44,7 +44,31 @@ const theme = createTheme({
     scrim: "rgb(0, 0, 0)",
   },
   typography: {
-    fontFamily: '"Noto Sans JP", Arial, sans-serif',
+    fontFamily: '"M PLUS Rounded 1c", "Noto Sans JP", Arial, sans-serif',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '20px', 
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderRadius: '10px',
+          height: '2px', 
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: '20px', 
+        },
+      },
+    }
   },
 });
 

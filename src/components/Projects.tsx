@@ -7,6 +7,7 @@ import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import DesignServicesRoundedIcon from '@mui/icons-material/DesignServicesRounded';
 import CategoryRoundedIcon from '@mui/icons-material/CategoryRounded';
+import { UnderlinedTypography } from "./Containers";
 
 const Header = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -234,7 +235,7 @@ const Projects = () => {
 
   return (
     <Container sx={{ my: 6 }}>
-      <Typography variant="h2" sx={{ mb: 6 }}>MY PROJECTS</Typography>
+      <UnderlinedTypography variant="h2" sx={{ mb: 6 }}>MY PROJECTS</UnderlinedTypography>
       <ToggleSection title="Development Projects" icon={<CodeRoundedIcon />}>
         <Grid container spacing={4}>
           {devProjects.map((project, index) => (
