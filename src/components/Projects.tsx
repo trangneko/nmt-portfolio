@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Collapse, Container, Grid, IconButton, styled } from "@mui/material";
-import ProjectCard, { IframeWrapper } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 import Typography from "@mui/material/Typography";
 import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
 import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';

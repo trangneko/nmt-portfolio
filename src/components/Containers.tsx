@@ -1,4 +1,4 @@
-import { Box, Container, styled, Typography } from "@mui/material";
+import { Container, styled, Typography } from "@mui/material";
 
 export const FullHeightContainer = styled(Container)(({ theme }) => ({
   display: "flex",

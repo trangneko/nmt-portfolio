@@ -18,6 +18,7 @@ import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import MailRoundedIcon from "@mui/icons-material/MailRounded";
 import { IconBox, IconContainer, IconImage } from "./Icons";
 import { TwoColContainer } from "./Containers";
+import { useTranslation } from "react-i18next";
 
 // import Ava from "/images/ava.jpg";
 
@@ -86,6 +87,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
   isSkill = false,
   icons = [],
 }) => {
+  const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -98,7 +100,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
         },
       }}
     >
-      <Box minWidth={{ xs: 100, md: 180 }}>
+      <Box minWidth={{ xs: 100, md: 180 }} maxWidth={{ xs:"30%", md: "100%"}}>
         <Typography
           variant="h6"
           sx={{
@@ -132,9 +134,9 @@ const EducationItem: React.FC<EducationItemProps> = ({
           variant="subtitle1"
           textAlign={"right"}
         >
-          at {company} (Tokyo, Japan)
+          {company} (Tokyo, Japan)
         </Typography>
-        <Typography sx={{ my: 2}}>What I did:</Typography></> : null}
+        <Typography sx={{ my: 2}}>{t('jobDes')}</Typography></> : null}
         <Typography>{description}</Typography>
         {isSkill && icons.length > 0 && (
           <IconContainer sx={{ flexWrap: "wrap" }}>
@@ -201,6 +203,8 @@ const mdkSkills = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
+  
   return (
     <Container sx={{ my: 6 }}>
       <TwoColContainer
@@ -216,15 +220,7 @@ const About = () => {
             </ruby>
           </FuriganaTypography>
           <Typography variant="body1">
-            I am currently a fourth-year student at Digital Hollywood University
-            in Tokyo, primarily focusing on web design. My passion for the
-            creative field started in high school, and during my time at
-            university, I discovered a new passion for web development. In my
-            free time, I enjoy photography, playing music games, and engaging in
-            retail activities. As a hobby, I run a small business and hope to
-            continue learning valuable skills. I am excited about exploring
-            internship or job opportunities in web design, web-application and
-            mobile application development.
+          {t('description')}
           </Typography>
         </Box>
 
@@ -397,14 +393,14 @@ const About = () => {
             dateRange="4/2021 - NOW"
             imageSrc="/images/icons/dhu.jpg"
             altText="Digital Hollywood University"
-            title="UNDERGRADUATE"
+            title={t('undergrad')}
             description={
               <>
-                Digital Hollywood University
+                {t('university')}
                 <br />
-                Faculty of Digital Communication
+                {t('universityFaculty')}
                 <br />
-                Department of Digital Content
+                {t('universityDepartment')}
               </>
             }
             backgroundColor="#ec6b04" // Optional custom background color
@@ -414,16 +410,16 @@ const About = () => {
             dateRange="10/2019 - 3/2021"
             imageSrc="/images/icons/olj.jpg"
             altText="OLJ Language Academy"
-            title="JAPANESE LANGUAGE STUDY"
-            description="OLJ Language Academy"
+            title={t('languageStudy')}
+            description={t('languageSchool')}
             isSkill={false}
           />
           <EducationItem
             dateRange="9/2016 - 5/2019"
             imageSrc="/images/icons/cnn.png"
             altText="Foreign Language Specialized School"
-            title="HIGH SCHOOL DIPLOMA"
-            description="Foreign Language Specialized School"
+            title={t('highSchool')}
+            description={t('highSchoolName')}
             isSkill={false}
           />
         </Container>
@@ -439,23 +435,21 @@ const About = () => {
         />
 
         {/* exp */}
-        <Container>
+        <Container sx={{ flexShrink: 3 }}>
           <TitleBox>
             <TitleTypography variant="h4">EXPERIENCES</TitleTypography>
           </TitleBox>
           <EducationItem
             dateRange="5/2023 - NOW"
-            title="PART-TIME WEB DEVELOPER"
-            company="Mandarake Inc."
+            title={t('mdkRole')}
+            company={t('mdkLocation')}
             description={
               <>
                 <List sx={{ listStyle: "inside" }}>
-                  <ListItem>Advertisement and banner design</ListItem>
-                  <ListItem>
-                    Web design, renewal, and wireframe creation
-                  </ListItem>
-                  <ListItem>Front-end engineering</ListItem>
-                  <ListItem>Internal mobile app development</ListItem>
+                  <ListItem>{t('mdkJobDes1')}</ListItem>
+                  <ListItem>{t('mdkJobDes2')}</ListItem>
+                  <ListItem>{t('mdkJobDes3')}</ListItem>
+                  <ListItem>{t('mdkJobDes4')}</ListItem>
                 </List>
               </>
             }
@@ -465,12 +459,12 @@ const About = () => {
           />
           <EducationItem
             dateRange="11/2021 - 12/2021"
-            title="PART-TIME GRAPHIC DESGINER"
+            title={t('lyymRole')}
             company="株式会社LYYM BEAUTY"
             description={
               <>
                 <Typography>
-                Advertisements, Facebook posts, and printed materials design.
+                {t('lyymJobDes')}
                 </Typography>
               </>
             }
@@ -506,8 +500,8 @@ const About = () => {
           }}
         >
           <LanguageProficiencyItem
-            language="ENGLISH"
-            proficiency="Professional Working Proficiency"
+            language={t('english')}
+            proficiency={t('langPro')}
             certifications={
               <>
                 TOEIC L&R 910/990 (4/2021)
@@ -517,13 +511,13 @@ const About = () => {
             }
           />
           <LanguageProficiencyItem
-            language="JAPANESE"
-            proficiency="Professional Working Proficiency"
+            language={t('japanese')}
+            proficiency={t('langPro')}
             certifications="JLPT N2 (12/2020)"
           />
           <LanguageProficiencyItem
-            language="VIETNAMESE"
-            proficiency="Native Proficiency"
+            language={t('vietnamese')}
+            proficiency={t('langNative')}
             certifications=""
           />
         </List>

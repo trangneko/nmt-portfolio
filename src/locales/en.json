@@ -1,0 +1,40 @@
+{
+    "welcome": "Welcome to My Playground",
+    "hello": "Hi, I am Nguyen Minh Trang,",
+    "hello2": "A Web Design Enthusiast from Vietnam.",
+    "helloDes": "Explore my work and get to know me.",
+
+    "description": "I am currently a fourth-year student at Digital Hollywood University in Tokyo, primarily focusing on web design, UI/UX design. My passion for the creative field started in high school, and during my time at university, I discovered a new passion for web development. In my free time, I enjoy photography, playing music games, and engaging in retail activities. As a hobby, I run a small business and hope to continue learning valuable skills. I am excited about exploring internship or job opportunities in web design, web-application and mobile application development.",
+
+    "undergrad": "UNDERGRADUATE",
+    "university": "Digital Hollywood University",
+    "universityFaculty": "Faculty of Digital Communication",
+    "universityDepartment": "Department of Digital Content",
+    "languageStudy": "JAPANESE LANGUAGE STUDY",
+    "languageSchool": "OLJ Language Academy",
+    "highSchool": "HIGH SCHOOL DIPLOMA",
+    "highSchoolName": "Foreign Language Specialized School",
+
+    "jobDes": "What I did:",
+    "mdkRole": "PART-TIME WEB DEVELOPER",
+    "mdkLocation": "Mandarake Inc.",
+    "mdkJobDes1": "Advertisement and banner design",
+    "mdkJobDes2": "Web design, renewal, and wireframe creation",
+    "mdkJobDes3": "Front-end engineering",
+    "mdkJobDes4": "Internal mobile app development",
+    "lyymRole": "PART-TIME GRAPHIC DESGINER",
+    "lyymLocation": "at 株式会社LYYM BEAUTY (Tokyo, Japan)",
+    "lyymJobDes": "Advertisements, Facebook posts, and printed materials design.",
+
+    "english": "ENGLISH",
+    "japanese": "JAPANESE",
+    "vietnamese": "VIETNAMESE",
+    "langPro": "Professional Working Proficiency",
+    "langNative": "Native Proficiency",
+
+    "devPj": "Development Projects",
+    "webPj": "Web Design Projects",
+    "graphicPj": "Graphic/Product Design Projects"
+
+  }
+  

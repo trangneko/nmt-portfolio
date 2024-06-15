@@ -6,6 +6,7 @@ import About from "./About";
 import Contact from "./Contact";
 import { FullHeightContainer, UnderlinedTypography } from "./Containers";
 import ProjectFeature from "./ProjectFeature";
+import { useTranslation } from "react-i18next";
 
 const BouncingArrow = styled(KeyboardDoubleArrowDownRoundedIcon)(
   ({ theme }) => ({
@@ -16,6 +17,7 @@ const BouncingArrow = styled(KeyboardDoubleArrowDownRoundedIcon)(
 
 const Home: React.FC = () => {
   const nextSectionRef = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
 
   const handleArrowClick = () => {
     if (nextSectionRef.current) {
@@ -38,11 +40,11 @@ const Home: React.FC = () => {
           sx={{ my: 4, fontSize: { xs: "2.7rem", md: "3.75rem" } }}
           gutterBottom
         >
-          Hi, I am Nguyen Minh Trang - <br />A Web Design Enthusiast from
-          Vietnam.
+          {t('hello')}<br/>
+          {t('hello2')}
         </Typography>
         <Typography variant="h4">
-          Explore my work and get to know me.
+          {t('helloDes')}
         </Typography>
         <Divider
           sx={{
