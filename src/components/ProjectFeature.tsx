@@ -49,7 +49,7 @@ const ProjectFeature = () => {
           </Grid>
         ))}
       </Grid>
-      <Button variant="contained" component={RouterLink} to="/projects">
+      <Button variant="contained" size="large" component={RouterLink} to="/projects">
         View More
       </Button>
     </>
