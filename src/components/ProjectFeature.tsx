@@ -22,7 +22,7 @@ const feature = [
       "My personal online store website focused on user interface, aiming for a clear design that conveys the store's appeal. One of the main features includes a blog posting function.",
     time: "2/2023 - 5/2023",
     image:
-      "https://media.licdn.com/dms/image/D4E2DAQF18pKQpmotgA/profile-treasury-image-shrink_800_800/0/1686076501900?e=1718571600&v=beta&t=atsi5C50T8OECAH1BCho78C305aLuIbFBRmjdjjeF4E",
+      "https://lh3.google.com/u/0/d/1elOK_ibFEJGmUr4eg8tHlcGC-EUL0AWM=w1457-h919-iv1",
     url: "https://thepetito.epizy.com/",
     skills: ["WordPress", "CSS"],
   },
