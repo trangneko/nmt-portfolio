@@ -93,14 +93,15 @@ const EducationItem: React.FC<EducationItemProps> = ({
       sx={{
         display: "flex",
         my: 4,
-        gap: "1rem",
+        gap: "2rem",
         flexDirection: {
           xs: isSkill ? "column" : "row",
           md: "row",
         },
+        textAlign: "left",
       }}
     >
-      <Box minWidth={{ xs: 100, md: 180 }} maxWidth={{ xs:"30%", md: "100%"}}>
+      <Box minWidth={{ sx: 100, md: 180 }}>
         <Typography
           variant="h6"
           sx={{
@@ -130,13 +131,14 @@ const EducationItem: React.FC<EducationItemProps> = ({
         >
           {title}
         </Typography>
-        {company ? <><Typography
-          variant="subtitle1"
-          textAlign={"right"}
-        >
-          {company} (Tokyo, Japan)
-        </Typography>
-        <Typography sx={{ my: 2}}>{t('jobDes')}</Typography></> : null}
+        {company ? (
+          <>
+            <Typography variant="subtitle1" textAlign={"right"}>
+              {company} (Tokyo, Japan)
+            </Typography>
+            <Typography sx={{ my: 2 }}>{t("jobDes")}</Typography>
+          </>
+        ) : null}
         <Typography>{description}</Typography>
         {isSkill && icons.length > 0 && (
           <IconContainer sx={{ flexWrap: "wrap" }}>
@@ -202,9 +204,21 @@ const mdkSkills = [
   { src: "/images/icons/flutter.svg", alt: "Flutter", whiteBackground: true },
 ];
 
+const gesherSkills = [
+  { src: "/images/icons/figma.svg", alt: "Figma" },
+  { src: "/images/icons/html-5.svg", alt: "HTML", whiteBackground: true },
+  { src: "/images/icons/css-3.svg", alt: "CSS", whiteBackground: true },
+  { src: "/images/icons/javascript.svg", alt: "JavaScript" },
+  { src: "/images/icons/react.svg", alt: "React.js" },
+  { src: "/images/icons/adobe-photoshop.svg", alt: "Adobe Phoptoshop" },
+  { src: "/images/icons/adobe-illustrator.svg", alt: "Adobe Illustrator" },
+];
+
+const ttSkills = [{ src: "/images/icons/figma.svg", alt: "Figma" }];
+
 const About = () => {
   const { t } = useTranslation();
-  
+
   return (
     <Container sx={{ my: 6 }}>
       <TwoColContainer
@@ -213,15 +227,20 @@ const About = () => {
         <Box sx={{ textAlign: "left" }}>
           <FuriganaTypography
             variant="h3"
-            sx={{ my: 4, fontSize: { xs: "2.5rem", md: "3rem" } }}
+            sx={{
+              my: 4,
+              fontSize: { xs: "2.5rem", md: "3rem" },
+              textAlign: "center",
+              lineHeight: "0.7",
+            }}
           >
             <ruby>
-              <rt>グエン・ミン・チャン</rt>NGUYEN MINH TRANG
+              <rt>グエン・ミン・チャン</rt>
+              <br />
+              NGUYEN MINH TRANG
             </ruby>
           </FuriganaTypography>
-          <Typography variant="body1">
-          {t('description')}
-          </Typography>
+          <Typography variant="body1">{t("description")}</Typography>
         </Box>
 
         <Box
@@ -370,7 +389,16 @@ const About = () => {
         </IconContainer>
       </TwoColContainer>
 
-      <Box
+      <Divider
+        sx={{
+          my: 6,
+          width: "100%",
+          height: 4,
+          backgroundColor: "primary.main",
+        }}
+      />
+
+      {/* <Box
         sx={{
           display: "flex",
           textAlign: "left",
@@ -383,48 +411,49 @@ const About = () => {
             md: "1rem",
           },
         }}
-      >
-        {/* education */}
-        <Container sx={{ width: { xs: "100%", md: "40%" } }}>
-          <TitleBox>
-            <TitleTypography variant="h4">EDUCATION</TitleTypography>
-          </TitleBox>
-          <EducationItem
-            dateRange="4/2021 - NOW"
-            imageSrc="/images/icons/dhu.jpg"
-            altText="Digital Hollywood University"
-            title={t('undergrad')}
-            description={
-              <>
-                {t('university')}
-                <br />
-                {t('universityFaculty')}
-                <br />
-                {t('universityDepartment')}
-              </>
-            }
-            backgroundColor="#ec6b04" // Optional custom background color
-            isSkill={false}
-          />
-          <EducationItem
-            dateRange="10/2019 - 3/2021"
-            imageSrc="/images/icons/olj.jpg"
-            altText="OLJ Language Academy"
-            title={t('languageStudy')}
-            description={t('languageSchool')}
-            isSkill={false}
-          />
-          <EducationItem
-            dateRange="9/2016 - 5/2019"
-            imageSrc="/images/icons/cnn.png"
-            altText="Foreign Language Specialized School"
-            title={t('highSchool')}
-            description={t('highSchoolName')}
-            isSkill={false}
-          />
-        </Container>
+      > */}
 
-        <Divider
+      {/* education */}
+      <Container sx={{ width: "100%" }}>
+        <TitleBox>
+          <TitleTypography variant="h4">EDUCATION</TitleTypography>
+        </TitleBox>
+        <EducationItem
+          dateRange="4/2021 - NOW"
+          imageSrc="/images/icons/dhu.jpg"
+          altText="Digital Hollywood University"
+          title={t("undergrad")}
+          description={
+            <>
+              {t("university")}
+              <br />
+              {t("universityFaculty")}
+              <br />
+              {t("universityDepartment")}
+            </>
+          }
+          backgroundColor="#ec6b04" // Optional custom background color
+          isSkill={false}
+        />
+        <EducationItem
+          dateRange="10/2019 - 3/2021"
+          imageSrc="/images/icons/olj.jpg"
+          altText="OLJ Language Academy"
+          title={t("languageStudy")}
+          description={t("languageSchool")}
+          isSkill={false}
+        />
+        <EducationItem
+          dateRange="9/2016 - 5/2019"
+          imageSrc="/images/icons/cnn.png"
+          altText="Foreign Language Specialized School"
+          title={t("highSchool")}
+          description={t("highSchoolName")}
+          isSkill={false}
+        />
+      </Container>
+
+      {/* <Divider
           orientation="vertical"
           sx={{
             width: { xs: "80%", md: "4px" },
@@ -432,56 +461,103 @@ const About = () => {
             backgroundColor: "primary.main",
             alignSelf: "center",
           }}
-        />
+        /> */}
 
-        {/* exp */}
-        <Container sx={{ flexShrink: 3 }}>
-          <TitleBox>
-            <TitleTypography variant="h4">EXPERIENCES</TitleTypography>
-          </TitleBox>
-          <EducationItem
-            dateRange="5/2023 - NOW"
-            title={t('mdkRole')}
-            company={t('mdkLocation')}
-            description={
-              <>
-                <List sx={{ listStyle: "inside" }}>
-                  <ListItem>{t('mdkJobDes1')}</ListItem>
-                  <ListItem>{t('mdkJobDes2')}</ListItem>
-                  <ListItem>{t('mdkJobDes3')}</ListItem>
-                  <ListItem>{t('mdkJobDes4')}</ListItem>
-                </List>
-              </>
-            }
-            backgroundColor="#ec6b04" // Optional custom background color
-            isSkill={true}
-            icons={mdkSkills}
-          />
-          <EducationItem
-            dateRange="11/2021 - 12/2021"
-            title={t('lyymRole')}
-            company="株式会社LYYM BEAUTY"
-            description={
-              <>
-                <Typography>
-                {t('lyymJobDes')}
-                </Typography>
-              </>
-            }
-            isSkill={true}
-            icons={[
-              { src: "/images/icons/adobe-photoshop.svg", alt: "Photoshop" },
-              {
-                src: "/images/icons/adobe-illustrator.svg",
-                alt: "Illustrator",
-              },
-            ]}
-          />
-        </Container>
-      </Box>
+<Divider
+        sx={{
+          my: 6,
+          width: "100%",
+          height: 4,
+          backgroundColor: "primary.main",
+        }}
+      />
+
+      {/* exp */}
+      <Container sx={{ flexShrink: 3 }}>
+        <TitleBox>
+          <TitleTypography variant="h4">EXPERIENCES</TitleTypography>
+        </TitleBox>
+        <EducationItem
+          dateRange="9/2024 - NOW"
+          title={t("ttRole")}
+          company={t("ttLocation")}
+          description={
+            <>
+              <List sx={{ listStyle: "inside" }}>
+                <ListItem>{t("ttJobDes1")}</ListItem>
+                <ListItem>{t("ttJobDes2")}</ListItem>
+              </List>
+            </>
+          }
+          isSkill={true}
+          icons={ttSkills}
+        />
+        <EducationItem
+          dateRange="7/2024 - NOW"
+          title={t("gesherRole")}
+          company={t("gesherLocation")}
+          description={
+            <>
+              <List sx={{ listStyle: "inside" }}>
+                <ListItem>{t("gesherJobDes1")}</ListItem>
+                <ListItem>{t("gesherJobDes2")}</ListItem>
+                <ListItem>{t("gesherJobDes3")}</ListItem>
+              </List>
+            </>
+          }
+          isSkill={true}
+          icons={gesherSkills}
+        />
+        <EducationItem
+          dateRange="5/2023 - 7/2024"
+          title={t("mdkRole")}
+          company={t("mdkLocation")}
+          description={
+            <>
+              <List sx={{ listStyle: "inside" }}>
+                <ListItem>{t("mdkJobDes1")}</ListItem>
+                <ListItem>{t("mdkJobDes2")}</ListItem>
+                <ListItem>{t("mdkJobDes3")}</ListItem>
+                <ListItem>{t("mdkJobDes4")}</ListItem>
+              </List>
+            </>
+          }
+          backgroundColor="#ec6b04" // Optional custom background color
+          isSkill={true}
+          icons={mdkSkills}
+        />
+        <EducationItem
+          dateRange="11/2021 - 12/2021"
+          title={t("lyymRole")}
+          company="株式会社LYYM BEAUTY"
+          description={
+            <>
+              <Typography>{t("lyymJobDes")}</Typography>
+            </>
+          }
+          isSkill={true}
+          icons={[
+            { src: "/images/icons/adobe-photoshop.svg", alt: "Photoshop" },
+            {
+              src: "/images/icons/adobe-illustrator.svg",
+              alt: "Illustrator",
+            },
+          ]}
+        />
+      </Container>
+      {/* </Box> */}
+
+      <Divider
+        sx={{
+          my: 6,
+          width: "100%",
+          height: 4,
+          backgroundColor: "primary.main",
+        }}
+      />
 
       {/* languages */}
-      <Box sx={{ my: 4, textAlign: "left" }}>
+      <Box sx={{ my: 4}}>
         <TitleBox>
           <TitleTypography variant="h4">LANGUAGES</TitleTypography>
         </TitleBox>
@@ -496,12 +572,12 @@ const About = () => {
             },
             gap: {
               xs: 2,
-            },
+            }, textAlign: "left" 
           }}
         >
           <LanguageProficiencyItem
-            language={t('english')}
-            proficiency={t('langPro')}
+            language={t("english")}
+            proficiency={t("langPro")}
             certifications={
               <>
                 TOEIC L&R 910/990 (4/2021)
@@ -511,13 +587,13 @@ const About = () => {
             }
           />
           <LanguageProficiencyItem
-            language={t('japanese')}
-            proficiency={t('langPro')}
-            certifications="JLPT N2 (12/2020)"
+            language={t("japanese")}
+            proficiency={t("langPro")}
+            certifications="JLPT N1 (7/2024)"
           />
           <LanguageProficiencyItem
-            language={t('vietnamese')}
-            proficiency={t('langNative')}
+            language={t("vietnamese")}
+            proficiency={t("langNative")}
             certifications=""
           />
         </List>

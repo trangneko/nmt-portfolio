@@ -4,16 +4,14 @@ import ProjectCard from "./ProjectCard";
 
 const feature = [
   {
-    tags: ["Part-time work", "Development", "Web Design"],
-    title: "Video Player Website",
+    tags: ["Personal", "Development", "Hobby", "Web Design"],
+    title: "Tabipura - Your AI Travel Planner Friend",
     description:
-      "A Vue.js-based webpage with video browsing and playback as the main function. I worked hard to implement a flick effect for each video similar to TikTok, using Swiper.",
-    role: "Frontend Developer, Web Designer",
-    time: "2 weeks in 4/2024",
-    image:
-      "https://lh3.googleusercontent.com/fife/ALs6j_FTFX875OCMA1Gzs-tGphKOw_CWN_ZUQBzhDNTc8keLYJLKcjYqXhBmTHdANvr3Y8BbFh6RfupvoOjaGabcXlXLR0mRN-0odNPcmQZdWlZs0zxAn8NAkyFtdaPbIPOt9VyytCOuMYBbDS2v5KxC1vG5ZS5kZYa0vUMTy8m2DQqXkH3LR4FL9JEPPCCcSOa_DAsAj2o5wEaYH6AM_8MAa9oTD1d-4S6qRMksgQIuobHH0u_3ZHMigedN1GXOHAJQOCfMXf53xUKXHPxfc5J3qEahnfNLfTlnQrz8dl3rBq84BJIrFEeyhehxdMHdcY8hiVg3tPO_HVm7p2UI_vDSpGR5BsVNHFXVZRVskfUsUvdbxqlRFqbxJjmYbhaQdXhXsTAyBxnFNHktO84Ze1Czv62YvPNyDZiafiH4Vpr0f6XKBDFVR8nlHKZMZuD-8GTfK-zTgAx1USA8akUyA_RZN1I9QxmQFgOpVqdAnHJ2BYqKJiAKHyEOynbPRGqvvmcquj24y7AW3SUQve0r-b-z7Txe1NftfOKQZrfU1lGb4QKut_KdqMPLXZLDCxtSTchb2v2O9RFUwJwG2eWeN0E2Q18LOhPgeGggZjXas-iiEcy2305B9edsrrve9gSqu35qCs_PESZZK2KhpNIH3hCONn0K9uW9BGDCPbeq4RNJm0R-WWnilGeH4SsVSteicejh0362jpwZ_HG0Cn2lV5MBJ16cvSxqCr7y4LBmAYYk4G8J5ijXo_Q45V2gT_yJQky1-V7OpuFJhlDOta6zs78wdmopZZQAOma-pc-lV57X9gEIj3VlACi2T1s42D0dW9t4A3hBliKrWjX0kLK3qzsg-QyRZaN5OSmgsVUen7KpCE_V6iTq9kKAPetaE8Px6j3da7e4_YgnrT0SuOhlkRXf1_AzRhf9GE2TunthhDHn15agHyUswEhtWuH8PODffz9oiiDiBGdPXhTCNngkm3YxG99Js9u8D1-1EzvEfv0cvQj8pxyJW_zfmcI9zPopzvAf10tIDOeUmUe2jkzWwlAl9QQPmKoOG6KcbsbNb7adPBzf8NQy2g8iaRk_Qu4G_uGW4TdAHcLqKw_IX7N6l8IPmSPcFk49VoQuEhVLl7EzBaZnva3-v1kHu0CnrZd08_tffyeMOK7c5Kwxx7uD62EZV4BThePzsMtlWgkw0aoTcgzWfAJegKtg-Ju6CRjzWQrd2zinkslpaopFdlThMOXNT9ZrAHRSYId_xaK3d6YeTFwjl8Yk9G8qtFKgYbY1SNh2FB2lTlOzHBCHAwANDAETjpn5Kcxk8Ko6OxxI_Hmi87dhfz80U9421dY7BeENhO9UK38vNG6Q1QRafGnUkQ2Z6qJJK708ia0u2JY4eVoKjgePAMtiM_hB5IwCRvYlyMkhcosdxWjZDI38qOaOU5GmwLZWkgEAODsa9kBVv56ZYG9Ak8aNnNqvE8v5pQmluhOQtHvEVj6yeiy4dzejkDGEa2mPKqHais_kMnvkf46lZbuiKRaeIDIjLyzd99E9XDbTxpuOUL48ey-RBzz-j0zXbE5VwvzES7uv_JV5Ji_4DPkiopfaPn79XpM_YGnNLZRiRuK4XZEW9zRjcUQS7rQNUg=w1390-h919",
-    url: "https://dc.mandarake.co.jp/dc-move/web/#/",
-    skills: ["Vue.js", "JavaScript", "SCSS"],
+      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase, MongoDB for the backend and React, MUI for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
+    time: "6/2024 - now",
+    image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
+    url: "https://tabipura.site",
+    skills: ["Node.js", "React.js", "Gemini", "Firebase", "Figma"],
   },
   {
     tags: ["Personal", "Development", "Web Design", "Hobby"],

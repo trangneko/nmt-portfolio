@@ -1,7 +1,7 @@
 {
     "welcome": "Welcome to My Playground",
-    "hello": "Hi, I am Nguyen Minh Trang,",
-    "hello2": "A Web Design Enthusiast from Vietnam.",
+    "hello": "Hi, My name is Trang but you can also call me Lucide,",
+    "hello2": "I can be a UI/UX/Web Designer and Front-end Developer",
     "helloDes": "Explore my work and get to know me.",
 
     "description": "I am currently a fourth-year student at Digital Hollywood University in Tokyo, primarily focusing on web design, UI/UX design. My passion for the creative field started in high school, and during my time at university, I discovered a new passion for web development. In my free time, I enjoy photography, playing music games, and engaging in retail activities. As a hobby, I run a small business and hope to continue learning valuable skills. I am excited about exploring internship or job opportunities in web design, web-application and mobile application development.",
@@ -16,6 +16,15 @@
     "highSchoolName": "Foreign Language Specialized School",
 
     "jobDes": "What I did:",
+    "ttRole": "UI/UX Designer",
+    "ttLocation": "Tokyo Techies Inc.",
+    "ttJobDes1": "AI Chatbot Service: Enhanced UX design to improve user interaction and satisfaction.",
+    "ttJobDes2": "Social Media: Designed posts to boost product awareness and engagement.",
+    "gesherRole": "UI/UX Designer",
+    "gesherLocation": "GESHER Inc.",
+    "gesherJobDes1": "Corporate Website: Led UI design, brainstorming, and wireframing with a user-centered, brand-aligned approach with STUDIO Design CMS.",
+    "gesherJobDes2": "Digital Magazine Project: Designed and refined UI, supporting front-end development for a seamless user experience.",
+    "gesherJobDes3": "Social Media: Created visually engaging ads to boost brand awareness and engagement.",
     "mdkRole": "PART-TIME WEB DEVELOPER",
     "mdkLocation": "Mandarake Inc.",
     "mdkJobDes1": "Advertisement and banner design",

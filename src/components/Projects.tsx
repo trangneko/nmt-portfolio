@@ -72,7 +72,7 @@ const Projects = () => {
           ))}
         </Grid>
       </ToggleSection>
-      <ToggleSection title="Web Design Projects" icon={<DesignServicesRoundedIcon />}>
+      <ToggleSection title="UI/UX/Web Design Projects" icon={<DesignServicesRoundedIcon />}>
         <Grid container spacing={4}>
           {webDesigns.map((project, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>

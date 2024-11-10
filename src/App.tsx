@@ -1,18 +1,18 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router";
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LoaderComponent from "./components/Loader";
 import ProjectPage from "./components/ProjectPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     // Set a timer to switch to content after 3 seconds
@@ -24,21 +24,28 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      const yOffset = -50; // Offset by 50px
+      const yPosition = aboutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="App">
       {loading ? (
         <LoaderComponent />
       ) : (
         <>
-        <I18nextProvider i18n={i18n}>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-          <Footer />
+          <I18nextProvider i18n={i18n}>
+            <Navbar onAboutClick={scrollToAbout} />
+            <Routes>
+              <Route path="/" element={<Home aboutRef={aboutRef} scrollToAbout={scrollToAbout}/>} />
+              <Route path="/projects" element={<ProjectPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+            <Footer />
           </I18nextProvider>
         </>
       )}

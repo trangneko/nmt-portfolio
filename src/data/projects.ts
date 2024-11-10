@@ -3,11 +3,11 @@ export const devProjects = [
     tags: ["Personal", "Development", "Hobby", "Web Design"],
     title: "Tabipura - Your AI Travel Planner Friend",
     description:
-      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase for the backend and Flutter for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
+      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase, MongoDB for the backend and React, MUI for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
     time: "6/2024 - now",
     image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
-    url: "https://github.com/trangneko/tabipura",
-    skills: ["Node.js", "Gemini", "Firebase", "Dart", "Flutter"],
+    url: "https://tabipura.site",
+    skills: ["Node.js", "React.js", "Gemini", "Firebase", "MongoDB", "Figma"],
   },
   {
     tags: ["Personal", "Development", "Hobby"],
@@ -16,7 +16,7 @@ export const devProjects = [
       "A full-stack e-commerce project using NextJS which handles adding items to the cart and payment processing from the purchaser's screen, as well as including management features for administrators.",
     time: "5/2024 - now",
     image: "/images/logo.png",
-    url: "https://github.com/trangneko/petito-shop/",
+    url: "https://petito-shop.vercel.app/",
     skills: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "MongoDB"],
   },
   {
@@ -58,6 +58,26 @@ export const devProjects = [
   // Add more projects here
 ];
 export const webDesigns = [
+  {
+    tags: ["Part-time work", "Development", "Web Design"],
+    title: "GESHER TIMES - A Digital Magazine Service",
+    description:
+      "GESHER TIMES is a digital magazine service dedicated to showcasing articles about innovation and startups in Japan, connecting them with global audiences and vice-versa, which also helps to enhance the brand presence of GESHER .inc.",
+    time: "7/2024 - 8/2024",
+    image: "https://lh3.google.com/u/1/d/1hgBhoNjRHUOFVfQhpea4EmPnq3AcaMhC=w1502-h919-iv1",
+    url: "https://times.gesher.co.jp/",
+    skills: ["React.js", "Figma"],
+  },
+  {
+    tags: ["Personal", "Development", "Hobby", "Web Design"],
+    title: "Tabipura - Your AI Travel Planner Friend",
+    description:
+      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase, MongoDB for the backend and React, MUI for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
+    time: "6/2024 - now",
+    image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
+    url: "https://tabipura.site",
+    skills: ["Node.js", "React.js", "Gemini", "Firebase", "Figma"],
+  },
   {
     tags: ["Personal", "Development", "Web Design", "Hobby"],
     title: "Petito Shop (WordPress ver.)",

@@ -25,7 +25,11 @@ import { IconBox } from "./Icons";
 import logo from "./../ava.jpg";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Navbar() {
+interface NavbarProps {
+  onAboutClick: () => void;
+}
+
+export default function Navbar({ onAboutClick }: NavbarProps) {
   const theme = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -56,7 +60,7 @@ export default function Navbar() {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/about">
+          <ListItemButton onClick={onAboutClick}>
             <AccountCircleRoundedIcon sx={{ marginRight: 1 }} />
             <ListItemText primary="About" />
           </ListItemButton>
@@ -113,7 +117,7 @@ export default function Navbar() {
               <HomeRoundedIcon sx={{ marginRight: 1 }} />
               Home
             </Button>
-            <Button color="inherit" component={Link} to="/about">
+            <Button color="inherit" onClick={onAboutClick}>
               <AccountCircleRoundedIcon sx={{ marginRight: 1 }} />
               About
             </Button>
@@ -125,7 +129,7 @@ export default function Navbar() {
               <MailRoundedIcon sx={{ marginRight: 1 }} />
               Contact
             </Button>
-            <Button color="inherit" >
+            <Button color="inherit">
               <LanguageIcon sx={{ marginRight: 1 }} />
               <LanguageSwitcher />
             </Button>

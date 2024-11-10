@@ -15,15 +15,20 @@ const BouncingArrow = styled(KeyboardDoubleArrowDownRoundedIcon)(
   })
 );
 
-const Home: React.FC = () => {
-  const nextSectionRef = useRef<HTMLDivElement | null>(null);
+interface HomeProps {
+  aboutRef: React.RefObject<HTMLDivElement>;
+  scrollToAbout: () => void;
+}
+
+const Home: React.FC<HomeProps> = ({ aboutRef, scrollToAbout }) => {
+  // const nextSectionRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
 
-  const handleArrowClick = () => {
-    if (nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const handleArrowClick = () => {
+  //   if (nextSectionRef.current) {
+  //     nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <Container sx={{ mb: 6 }}>
@@ -40,12 +45,11 @@ const Home: React.FC = () => {
           sx={{ my: 4, fontSize: { xs: "2.7rem", md: "3.75rem" } }}
           gutterBottom
         >
-          {t('hello')}<br/>
-          {t('hello2')}
+          {t("hello")}
+          <br />
+          {t("hello2")}
         </Typography>
-        <Typography variant="h4">
-          {t('helloDes')}
-        </Typography>
+        <Typography variant="h4">{t("helloDes")}</Typography>
         <Divider
           sx={{
             my: 6,
@@ -55,10 +59,10 @@ const Home: React.FC = () => {
           }}
         />
 
-        <BouncingArrow fontSize="large" onClick={handleArrowClick} />
+        <BouncingArrow fontSize="large" onClick={scrollToAbout} />
       </FullHeightContainer>
 
-      <Box ref={nextSectionRef} py={6}>
+      <Box ref={aboutRef} py={6} id="about">
         <UnderlinedTypography variant="h3">ABOUT ME</UnderlinedTypography>
         <About />
       </Box>
