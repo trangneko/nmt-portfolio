@@ -9,6 +9,7 @@ import ContactPage from "./components/ContactPage";
 import { useEffect, useRef, useState } from "react";
 import LoaderComponent from "./components/Loader";
 import ProjectPage from "./components/ProjectPage";
+import ResumePage from "./components/AboutPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
             <Navbar onAboutClick={scrollToAbout} />
             <Routes>
               <Route path="/" element={<Home aboutRef={aboutRef} scrollToAbout={scrollToAbout}/>} />
+              <Route path="/resume" element={<ResumePage />} />
               <Route path="/projects" element={<ProjectPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
