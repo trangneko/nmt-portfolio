@@ -88,7 +88,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
   isSkill = false,
   icons = [],
 }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   return (
     <Box
       sx={{
@@ -120,7 +120,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
           </IconBox>
         )}
       </Box>
-      <Box>
+      <Box width={"100%"}>
         <Typography
           variant="h6"
           sx={{
@@ -137,7 +137,7 @@ const EducationItem: React.FC<EducationItemProps> = ({
             <Typography variant="subtitle1" textAlign={"right"}>
               {company} (Tokyo, Japan)
             </Typography>
-            <Typography sx={{ my: 2 }}>{t("jobDes")}</Typography>
+            {/* <Typography sx={{ my: 2 }}>{t("jobDes")}</Typography> */}
           </>
         ) : null}
         <Typography>{description}</Typography>
@@ -530,7 +530,7 @@ const About = () => {
         <EducationItem
           dateRange="11/2021 - 12/2021"
           title={t("lyymRole")}
-          company="株式会社LYYM BEAUTY"
+          company={t("lyymLocation")}
           description={
             <>
               <Typography>{t("lyymJobDes")}</Typography>
