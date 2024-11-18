@@ -9,4 +9,5 @@ export interface Project {
     skills: string[];
     hasModal?: boolean;
     modalContent?: ReactNode;
+    pdf?: string;
   }

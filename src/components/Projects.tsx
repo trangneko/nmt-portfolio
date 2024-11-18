@@ -63,18 +63,18 @@ const Projects = () => {
   return (
     <Container sx={{ my: 6 }}>
       <UnderlinedTypography variant="h2" sx={{ mb: 6 }}>MY PROJECTS</UnderlinedTypography>
-      <ToggleSection title="Development Projects" icon={<CodeRoundedIcon />}>
+      <ToggleSection title="UI/UX/Web Design Projects" icon={<DesignServicesRoundedIcon />}>
         <Grid container spacing={4}>
-          {devProjects.map((project, index) => (
+          {webDesigns.map((project, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <ProjectCard project={project} />
             </Grid>
           ))}
         </Grid>
       </ToggleSection>
-      <ToggleSection title="UI/UX/Web Design Projects" icon={<DesignServicesRoundedIcon />}>
+      <ToggleSection title="Development Projects" icon={<CodeRoundedIcon />}>
         <Grid container spacing={4}>
-          {webDesigns.map((project, index) => (
+          {devProjects.map((project, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <ProjectCard project={project} />
             </Grid>

@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { Project } from "../types/Project";
 import Chip from "@mui/material/Chip";
+import PDFViewer from "./PdfViewer";
 
 interface ProjectCardProps {
   project: Project;
@@ -45,20 +46,20 @@ const ModalContent = styled(Box)(({ theme }) => ({
 }));
 
 export const IframeWrapper = styled(Box)(({ theme }) => ({
-    position: 'relative',
-    width: '100%',
-    paddingBottom: '56.25%', // Aspect ratio 16:9
-    height: 0,
-    overflow: 'hidden',
-    iframe: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      border: 'none',
-    },
-  }));
+  position: "relative",
+  width: "100%",
+  paddingBottom: "56.25%", // Aspect ratio 16:9
+  height: 0,
+  overflow: "hidden",
+  iframe: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    border: "none",
+  },
+}));
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [open, setOpen] = useState(false);
@@ -104,13 +105,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               {project.description}
             </Typography>
 
-            <Divider  variant="middle" component="li" />
+            <Divider variant="middle" sx={{ my: 1 }} />
 
-            {project.role &&<Typography variant="body2" color="text.secondary">
-            My role in team: {project.role}
-            </Typography>}
+            {project.role && (
+              <Typography variant="body2" color="text.secondary">
+                My role in team: {project.role}
+              </Typography>
+            )}
             <Typography variant="body2" color="text.secondary">
-            Production period: {project.time}
+              Production period: {project.time}
             </Typography>
             <ChipContainer>
               {project.skills.map((skill, index) => (
@@ -145,8 +148,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   {project.title}
                 </Typography>
                 <Box mt={2}>
-                    <img src={project.image} alt={project.title} style={{ maxWidth: '100%' }} />
-                  </Box>
+                  {project.url && (
+                    <Typography sx={{my: 1}}>Link to production: <a href={`${project.url}`} target="_blank" rel="noreferrer">{project.url}</a></Typography>
+                  )}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{ maxWidth: "100%" }}
+                  />
+                  {project.pdf && <PDFViewer pdf={project.pdf} renderTextLayer={false} />}
+                </Box>
               </>
             </ModalContent>
           </Fade>

@@ -19,12 +19,13 @@ export const TwoColContainer = styled(Container)(({ theme }) => ({
 export const UnderlinedTypography = styled(Typography)(({ theme }) => ({
   position: "relative",
   display: "inline-block",
+  color: theme.palette.secondary.dark,
   "&::after": {
     content: '""',
     display: "block",
     width: "70%", // Adjust the width as needed
     height: "4px", // Height of the underline
-    backgroundColor: theme.palette.info.main, // Underline color
+    backgroundColor: theme.palette.secondary.light, // Underline color
     margin: "5px auto 0", // Adjust margin as needed
     borderRadius: "2px", // Rounded corners for the underline
   },

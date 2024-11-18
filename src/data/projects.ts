@@ -67,6 +67,8 @@ export const webDesigns = [
     image: "https://lh3.google.com/u/1/d/1hgBhoNjRHUOFVfQhpea4EmPnq3AcaMhC=w1502-h919-iv1",
     url: "https://times.gesher.co.jp/",
     skills: ["React.js", "Figma"],
+    hasModal: true,
+    pdf: "./pdf/pj-geshertimes.pdf"
   },
   {
     tags: ["Personal", "Development", "Hobby", "Web Design"],

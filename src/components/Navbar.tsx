@@ -24,6 +24,7 @@ import { useState } from "react";
 import { IconBox } from "./Icons";
 import logo from "./../ava.jpg";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Assignment } from "@mui/icons-material";
 
 interface NavbarProps {
   onAboutClick: () => void;
@@ -63,6 +64,12 @@ export default function Navbar({ onAboutClick }: NavbarProps) {
           <ListItemButton onClick={onAboutClick}>
             <AccountCircleRoundedIcon sx={{ marginRight: 1 }} />
             <ListItemText primary="About" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/resume">
+            <Assignment sx={{ marginRight: 1 }} />
+            <ListItemText primary="Resume" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -119,7 +126,11 @@ export default function Navbar({ onAboutClick }: NavbarProps) {
             </Button>
             <Button color="inherit" onClick={onAboutClick}>
               <AccountCircleRoundedIcon sx={{ marginRight: 1 }} />
-              About
+              About me
+            </Button>
+            <Button color="inherit" component={Link} to="/resume">
+              <Assignment sx={{ marginRight: 1 }} />
+              Resume
             </Button>
             <Button color="inherit" component={Link} to="/projects">
               <AccountTreeRoundedIcon sx={{ marginRight: 1 }} />

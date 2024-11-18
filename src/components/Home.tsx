@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import logo from "./../ava.jpg";
 import { Box, Container, Divider, styled, Typography } from "@mui/material";
 import KeyboardDoubleArrowDownRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowDownRounded";
@@ -21,14 +20,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ aboutRef, scrollToAbout }) => {
-  // const nextSectionRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
-
-  // const handleArrowClick = () => {
-  //   if (nextSectionRef.current) {
-  //     nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
 
   return (
     <Container sx={{ mb: 6 }}>
