@@ -16,23 +16,23 @@
     "highSchoolName": "Foreign Language Specialized School",
 
     "jobDes": "What I did:",
-    "ttRole": "UI/UX Designer",
-    "ttLocation": "Tokyo Techies Inc.",
+    "ttRole": "UI/UX DESIGNER INTERN",
+    "ttLocation": "@ Tokyo Techies Inc.",
     "ttJobDes1": "AI Chatbot Service: Enhanced UX design to improve user interaction and satisfaction.",
     "ttJobDes2": "Social Media: Designed posts to boost product awareness and engagement.",
-    "gesherRole": "UI/UX Designer",
-    "gesherLocation": "GESHER Inc.",
+    "gesherRole": "UI/UX DESIGNER INTERN",
+    "gesherLocation": "@ GESHER Inc.",
     "gesherJobDes1": "Corporate Website: Led UI design, brainstorming, and wireframing with a user-centered, brand-aligned approach with STUDIO Design CMS.",
     "gesherJobDes2": "Digital Magazine Project: Designed and refined UI, supporting front-end development for a seamless user experience.",
     "gesherJobDes3": "Social Media: Created visually engaging ads to boost brand awareness and engagement.",
     "mdkRole": "PART-TIME WEB DEVELOPER",
-    "mdkLocation": "Mandarake Inc.",
+    "mdkLocation": "@ Mandarake Inc.",
     "mdkJobDes1": "Advertisement and banner design",
     "mdkJobDes2": "Web design, renewal, and wireframe creation",
     "mdkJobDes3": "Front-end engineering",
     "mdkJobDes4": "Internal mobile app development",
     "lyymRole": "PART-TIME GRAPHIC DESGINER",
-    "lyymLocation": "at 株式会社LYYM BEAUTY (Tokyo, Japan)",
+    "lyymLocation": "@ 株式会社LYYM BEAUTY",
     "lyymJobDes": "Advertisements, Facebook posts, and printed materials design.",
 
     "english": "ENGLISH",
@@ -48,6 +48,6 @@
     "resume": "RESUME",
     "resumeDownloadLink": "https://drive.google.com/file/d/11Y677iZbCEDzSwZogAtI_DvEpZtNpCwj/view?usp=sharing",
     "downloadButton": "Download File",
-    "resumeViewLink": "./pdf/ux-resume.pdf"
+    "resumeViewLink": "/pdf/ux-resume.pdf"
    }
   
