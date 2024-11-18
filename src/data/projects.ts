@@ -68,7 +68,7 @@ export const webDesigns = [
     url: "https://times.gesher.co.jp/",
     skills: ["React.js", "Figma"],
     hasModal: true,
-    pdf: "./pdf/pj-geshertimes.pdf"
+    pdf: "https://drive.google.com/file/d/1IhZ7_wqV5hzXqAF5or0L1G9OF1TmZG6n/preview"
   },
   {
     tags: ["Personal", "Development", "Hobby", "Web Design"],

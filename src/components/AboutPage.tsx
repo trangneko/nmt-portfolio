@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import { UnderlinedTypography } from "./Containers";
 import { Download } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-import PDFViewer from "./PdfViewer";
 
 const ResumePage = () => {
   const { t } = useTranslation();
@@ -20,7 +19,7 @@ const ResumePage = () => {
         <Box sx={{ my: 2, display: "flex", justifyContent: "end" }}>
           <Button variant="outlined" startIcon={<Download/>} href={t("resumeDownloadLink")} target="_blank">{t("downloadButton")}</Button>
         </Box>
-        <PDFViewer pdf={t("resumeViewLink")} renderTextLayer={true} />
+        <iframe title="Resume" src={t("resumeViewLink")} width="100%" style={{height: "80vh"}} allow="autoplay" allowFullScreen></iframe>
       </Container>
     </>
   );

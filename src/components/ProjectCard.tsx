@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import { Project } from "../types/Project";
 import Chip from "@mui/material/Chip";
-import PDFViewer from "./PdfViewer";
 
 interface ProjectCardProps {
   project: Project;
@@ -156,7 +155,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     alt={project.title}
                     style={{ maxWidth: "100%" }}
                   />
-                  {project.pdf && <PDFViewer pdf={project.pdf} renderTextLayer={false} />}
+                  {project.pdf && <iframe title={project.title} src={project.pdf} width="100%" style={{height: "80vh"}} allow="autoplay" allowFullScreen></iframe>}
                 </Box>
               </>
             </ModalContent>
