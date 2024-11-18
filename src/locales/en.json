@@ -43,7 +43,11 @@
 
     "devPj": "Development Projects",
     "webPj": "Web Design Projects",
-    "graphicPj": "Graphic/Product Design Projects"
+    "graphicPj": "Graphic/Product Design Projects",
 
-  }
+    "resume": "RESUME",
+    "resumeDownloadLink": "https://drive.google.com/file/d/11Y677iZbCEDzSwZogAtI_DvEpZtNpCwj/view?usp=sharing",
+    "downloadButton": "Download File",
+    "resumeViewLink": "./pdf/ux-resume.pdf"
+   }
   

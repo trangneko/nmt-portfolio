@@ -45,7 +45,7 @@ const TitleBox = styled(Box)(({ theme }) => ({
     left: "-10px",
     width: "95%",
     height: "70%",
-    backgroundColor: theme.palette.info.main,
+    backgroundColor: theme.palette.secondary.light,
     borderRadius: "20px", // Match the border radius of the main box
     zIndex: -1, // Place behind the box
     transition: "all 0.3s ease",
@@ -56,6 +56,7 @@ const TitleTypography = styled(Typography)(({ theme }) => ({
   position: "relative",
   zIndex: 1,
   padding: "0 8px", // Ensure text is above the background
+  color: theme.palette.secondary.dark,
 }));
 
 interface IconItem {
@@ -264,7 +265,7 @@ const About = () => {
                 right: 0,
                 bottom: 0,
                 borderRadius: "20%",
-                border: `2px solid ${useTheme().palette.info.main}`,
+                border: `2px solid ${useTheme().palette.secondary.dark}`,
                 zIndex: -1,
               },
             }}
