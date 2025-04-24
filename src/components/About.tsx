@@ -420,7 +420,7 @@ const About = () => {
           <TitleTypography variant="h4">EDUCATION</TitleTypography>
         </TitleBox>
         <EducationItem
-          dateRange="4/2021 - NOW"
+          dateRange="4/2021 - 3/2025"
           imageSrc="/images/icons/dhu.jpg"
           altText="Digital Hollywood University"
           title={t("undergrad")}
@@ -487,6 +487,21 @@ const About = () => {
               <List sx={{ listStyle: "inside" }}>
                 <ListItem>{t("ttJobDes1")}</ListItem>
                 <ListItem>{t("ttJobDes2")}</ListItem>
+              </List>
+            </>
+          }
+          isSkill={true}
+          icons={ttSkills}
+        />
+        <EducationItem
+          dateRange="1/2025 - 3/2025"
+          title={t("tensoRole")}
+          company={t("tensoLocation")}
+          description={
+            <>
+              <List sx={{ listStyle: "inside" }}>
+                <ListItem>{t("tensoJobDes1")}</ListItem>
+                <ListItem>{t("tensoJobDes2")}</ListItem>
               </List>
             </>
           }

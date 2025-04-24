@@ -34,14 +34,14 @@ const Home: React.FC<HomeProps> = ({ aboutRef, scrollToAbout }) => {
         <Typography
           variant="h2"
           component="h1"
-          sx={{ my: 4, fontSize: { xs: "2.7rem", md: "3.75rem" } }}
+          sx={{ my: 4, fontSize: { xs: "2.5rem", md: "3.2em" }, lineHeight: 1.5 }}
           gutterBottom
         >
           {t("hello")}
           <br />
           {t("hello2")}
         </Typography>
-        <Typography variant="h4">{t("helloDes")}</Typography>
+        <Typography variant="h4" lineHeight={1.5}>{t("helloDes")}</Typography>
         <Divider
           sx={{
             my: 6,

@@ -1,10 +1,10 @@
 {
     "welcome": "My Playgroundへようこそ！",
-    "hello": "こんにちは、ミンチャンと言います。",
-    "hello2": "ベトナム出身のウェブデザイン愛好者です。",
-    "helloDes": "作品を見て、私について知ってください。",
+    "hello": "はじめまして！ミンチャンです。",
+    "hello2": "東京に住んでいるベトナム出身のUI/UXデザイナーです。",
+    "helloDes": "このポートフォリオを通して、私の作品や人となりを知ってもらえたら嬉しいです！",
 
-    "description": "私は現在、デジタルハリウッド大学に通う4年生で、主にWebデザインとUI/UXデザインを専攻しています。クリエイティブな分野への情熱は高校時代から始まり、大学ではWeb開発への新たな情熱を見出しました。自由な時間には、写真撮影、音楽ゲーム、リテール活動を楽しんでいます。また、趣味として小さなビジネスを運営しており、今後も貴重なスキルを学び続けたいと思っています。Webデザイン、Webアプリケーションやモバイルアプリケーションの開発におけるインターンシップや仕事の機会を探求することにワクワクしています。",
+    "description": "私は現在、社会人1年目のUI/UXデザイナーで、デジタルハリウッド大学を卒業しました。在学中は主にWebデザインやUI/UXデザインを専攻し、高校時代からのクリエイティブ分野への情熱をさらに深めるとともに、大学ではWeb開発への関心も芽生えました。\n趣味は写真撮影や音楽ゲーム、リテール分野のトレンドを探ることです。また、個人で小さなビジネスも運営しており、日々実践的なスキルを学び続けています。\n今後もWebデザイン、Webアプリケーション、モバイルアプリ開発の分野でスキルを伸ばし、成長していきたいと考えています。",
 
     "undergrad": "学士",
     "university": "デジタルハリウッド大学",
@@ -20,6 +20,10 @@
     "ttLocation": "@株式会社Tokyo Techies",
     "ttJobDes1": "AIチャットボットサービス: ユーザーインタラクションと満足度を向上させるためにUXデザインを強化",
     "ttJobDes2": "ソーシャルメディア: 製品の認知度とエンゲージメントを高める投稿をデザイン",
+    "tensoRole": "UXデザイナーインターン",
+    "tensoLocation": "@BEENOSグループ tenso株式会社",
+    "tensoJobDes1": "Buyeeウェブサイト向けの新しいAI機能に関する提案書およびワイヤーフレームを作成し、ユーザー体験と機能性の向上を目指す",
+    "tensoJobDes2": "デザインの根拠を明確にするためのUXドキュメントやユーザーフローを作成し、チーム間の円滑なコミュニケーションをサポート",
     "gesherRole": "UI/UXデザイナーインターン",
     "gesherLocation": "@株式会社ゲシェル",
     "gesherJobDes1": "コーポレートウェブサイト: スタジオデザインCMSでユーザー中心かつブランドに沿ったアプローチで、UIデザイン、ブレインストーミング、ワイヤーフレーム作成を主導",
@@ -46,8 +50,8 @@
     "graphicPj": "グラフィックまたはプロジェクトデザインプロジェクト",
 
     "resume": "履歴書",
-    "resumeDownloadLink": "https://drive.google.com/file/d/1uINevd-KPqgDlwHls_Go99l4yHo_Qf-X/view?usp=sharing",
+    "resumeDownloadLink": "https://drive.google.com/file/d/1Tq3W3HzNIJDwgwWS5jH7OZnFOzZ15eCd/view?usp=sharing",
     "downloadButton": "PDFダウンロード",
-    "resumeViewLink": "https://drive.google.com/file/d/1uINevd-KPqgDlwHls_Go99l4yHo_Qf-X/preview"
+    "resumeViewLink": "https://drive.google.com/file/d/1Tq3W3HzNIJDwgwWS5jH7OZnFOzZ15eCd/preview"
   }
   

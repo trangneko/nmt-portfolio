@@ -8,6 +8,8 @@ export const devProjects = [
     image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
     url: "https://tabipura.site",
     skills: ["Node.js", "React.js", "Gemini", "Firebase", "MongoDB", "Figma"],
+    hasModal: true,
+    pdf: "https://drive.google.com/file/d/1Sz55DzAm6d1sRU0se24c3TgNYpoR20bP/preview"
   },
   {
     tags: ["Personal", "Development", "Hobby"],
@@ -79,6 +81,8 @@ export const webDesigns = [
     image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
     url: "https://tabipura.site",
     skills: ["Node.js", "React.js", "Gemini", "Firebase", "Figma"],
+    hasModal: true,
+    pdf: "https://drive.google.com/file/d/1Sz55DzAm6d1sRU0se24c3TgNYpoR20bP/preview"
   },
   {
     tags: ["Personal", "Development", "Web Design", "Hobby"],
