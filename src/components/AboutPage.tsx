@@ -19,7 +19,7 @@ const ResumePage = () => {
         <Box sx={{ my: 2, display: "flex", justifyContent: "end" }}>
           <Button variant="outlined" startIcon={<Download/>} href={t("resumeDownloadLink")} target="_blank">{t("downloadButton")}</Button>
         </Box>
-        <iframe title="Resume" src={t("resumeViewLink")} width="100%" style={{height: "80vh"}} allow="autoplay" allowFullScreen></iframe>
+        <iframe title="Resume" src={t("resumeViewLink")} width="100%" style={{height: "80vh"}} allow="autoplay"></iframe>
       </Container>
     </>
   );

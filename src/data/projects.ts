@@ -3,11 +3,11 @@ export const devProjects = [
     tags: ["Personal", "Development", "Hobby", "Web Design"],
     title: "Tabipura - Your AI Travel Planner Friend",
     description:
-      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase, MongoDB for the backend and React, MUI for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
-    time: "6/2024 - now",
-    image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
+      "A full-stack AI-powered travel planner web app that automatically generates detailed travel itineraries with just one click. Built using Node.js, Gemini API, Firebase, and MongoDB on the backend, and React with MUI on the frontend. Users can register, log in, view previously saved itineraries, and share their plans with others. As my graduation project, I was responsible for everything from planning and UX/UI design to full-stack development. Awarded 最優秀賞 (Best Project) among 8 other products in my research seminar (Webディレクション＆デザイン研究ゼミ).",
+    time: "6/2024 - 1/2025",
+    image: "https://www.tabipura.site/assets/preview-ja.png",
     url: "https://tabipura.site",
-    skills: ["Node.js", "React.js", "Gemini", "Firebase", "MongoDB", "Figma"],
+    skills: ["Node.js", "React.js", "HTML/CSS", "Gemini", "Firebase", "Figma"],
     hasModal: true,
     pdf: "https://drive.google.com/file/d/1Sz55DzAm6d1sRU0se24c3TgNYpoR20bP/preview"
   },
@@ -16,7 +16,7 @@ export const devProjects = [
     title: "Petito Shop (Next.js ver.)",
     description:
       "A full-stack e-commerce project using NextJS which handles adding items to the cart and payment processing from the purchaser's screen, as well as including management features for administrators.",
-    time: "5/2024 - now",
+    time: "5/2024 - 6/2024 (pending)",
     image: "/images/logo.png",
     url: "https://petito-shop.vercel.app/",
     skills: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "MongoDB"],
@@ -59,7 +59,19 @@ export const devProjects = [
   },
   // Add more projects here
 ];
-export const webDesigns = [
+export const webDesigns = [  
+  {
+    tags: ["Personal", "Development", "Hobby", "Web Design"],
+    title: "Tabipura - Your AI Travel Planner Friend",
+    description:
+      "A full-stack AI-powered travel planner web app that automatically generates detailed travel itineraries with just one click. Built using Node.js, Gemini API, Firebase, and MongoDB on the backend, and React with MUI on the frontend. Users can register, log in, view previously saved itineraries, and share their plans with others. As my graduation project, I was responsible for everything from planning and UX/UI design to full-stack development. Awarded 最優秀賞 (Best Project) among 8 other products in my research seminar (Webディレクション＆デザイン研究ゼミ).",
+    time: "6/2024 - 1/2025",
+    image: "https://www.tabipura.site/assets/preview-ja.png",
+    url: "https://tabipura.site",
+    skills: ["Node.js", "React.js", "HTML/CSS", "Gemini", "Firebase", "Figma"],
+    hasModal: true,
+    pdf: "https://drive.google.com/file/d/1Sz55DzAm6d1sRU0se24c3TgNYpoR20bP/preview"
+  },
   {
     tags: ["Part-time work", "Development", "Web Design"],
     title: "GESHER TIMES - A Digital Magazine Service",
@@ -71,18 +83,6 @@ export const webDesigns = [
     skills: ["React.js", "Figma"],
     hasModal: true,
     pdf: "https://drive.google.com/file/d/1IhZ7_wqV5hzXqAF5or0L1G9OF1TmZG6n/preview"
-  },
-  {
-    tags: ["Personal", "Development", "Hobby", "Web Design"],
-    title: "Tabipura - Your AI Travel Planner Friend",
-    description:
-      "A full-stack AI travel planner project using Node.js, Gemini API, and Firebase, MongoDB for the backend and React, MUI for the frontend, which creates a detailed trip plan for users with just one click! I am planning to add login features to save users' favorite plans and to share their plans with others. This is my graduation project, so I have put a lot of effort into everything from project planning to design and development.",
-    time: "6/2024 - now",
-    image: "https://lh3.google.com/u/0/d/1d_XwCD84UYVP_mH0SNtHDjV4_qMuhqPv=w1920-h919-iv1",
-    url: "https://tabipura.site",
-    skills: ["Node.js", "React.js", "Gemini", "Firebase", "Figma"],
-    hasModal: true,
-    pdf: "https://drive.google.com/file/d/1Sz55DzAm6d1sRU0se24c3TgNYpoR20bP/preview"
   },
   {
     tags: ["Personal", "Development", "Web Design", "Hobby"],

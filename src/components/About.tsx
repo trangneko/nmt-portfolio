@@ -509,7 +509,7 @@ const About = () => {
           icons={ttSkills}
         />
         <EducationItem
-          dateRange="7/2024 - NOW"
+          dateRange="7/2024 - 1/2024"
           title={t("gesherRole")}
           company={t("gesherLocation")}
           description={
